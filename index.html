@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DateFlo — Curated Date Plans</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #1a0a10 0%, #2d1320 30%, #1a0a10 100%);
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .floating-hearts {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .floating-hearts span {
+      position: absolute;
+      font-size: 1.2rem;
+      opacity: 0;
+      animation: floatUp 12s ease-in infinite;
+    }
+    @keyframes floatUp {
+      0%   { opacity: 0; transform: translateY(100vh) rotate(0deg); }
+      10%  { opacity: 0.3; }
+      90%  { opacity: 0.1; }
+      100% { opacity: 0; transform: translateY(-10vh) rotate(360deg); }
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 2rem;
+      max-width: 600px;
+    }
+
+    .logo-mark {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #e05780, #ff6b9d, #f8a4c0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.5rem;
+      letter-spacing: -1px;
+    }
+
+    .tagline {
+      font-size: 1.1rem;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.6);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 2.5rem;
+    }
+
+    .divider {
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #e05780, transparent);
+      margin: 0 auto 2.5rem;
+    }
+
+    .message {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.5);
+      font-weight: 300;
+    }
+
+    .message a {
+      color: #e05780;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .message a:hover { color: #ff6b9d; }
+
+    @media (max-width: 480px) {
+      .logo-mark { font-size: 2.8rem; }
+      .tagline { font-size: 0.85rem; letter-spacing: 2px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="floating-hearts">
+    <span style="left:5%;animation-delay:0s;animation-duration:10s">♥</span>
+    <span style="left:15%;animation-delay:2s;animation-duration:14s">♥</span>
+    <span style="left:25%;animation-delay:4s;animation-duration:11s">♥</span>
+    <span style="left:40%;animation-delay:1s;animation-duration:13s">♥</span>
+    <span style="left:55%;animation-delay:3s;animation-duration:10s">♥</span>
+    <span style="left:65%;animation-delay:5s;animation-duration:15s">♥</span>
+    <span style="left:75%;animation-delay:0.5s;animation-duration:12s">♥</span>
+    <span style="left:85%;animation-delay:2.5s;animation-duration:11s">♥</span>
+    <span style="left:95%;animation-delay:4.5s;animation-duration:14s">♥</span>
+  </div>
+
+  <div class="container">
+    <div class="logo-mark">DateFlo</div>
+    <div class="tagline">Curated Date Plans</div>
+    <div class="divider"></div>
+    <p class="message">
+      Your personalized date plan has been shared with you via a direct link.<br><br>
+      If you need a new plan, reach out to your DateFlo planner.
+    </p>
+  </div>
+
+</body>
+</html>
