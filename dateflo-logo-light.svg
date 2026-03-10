@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 160" width="520" height="160">
+  <defs>
+    <linearGradient id="brand" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff5c9a"/>
+      <stop offset="50%" stop-color="#e84888"/>
+      <stop offset="100%" stop-color="#f04858"/>
+    </linearGradient>
+    <linearGradient id="swoosh" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff5c9a"/>
+      <stop offset="100%" stop-color="#f04858"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ─── Icon: Calendar + Heart ─── -->
+  <g transform="translate(20, 16)">
+    <!-- Calendar body -->
+    <rect x="8" y="28" width="96" height="88" rx="16" ry="16" fill="#2a2048"/>
+    <rect x="8" y="28" width="96" height="88" rx="16" ry="16" fill="none" stroke="url(#brand)" stroke-width="3.5"/>
+    <!-- Calendar top bar -->
+    <rect x="8" y="28" width="96" height="28" rx="16" ry="16" fill="#e84888"/>
+    <rect x="8" y="56" width="96" height="4" fill="#2a2048"/>
+    <!-- Calendar hooks -->
+    <line x1="38" y1="18" x2="38" y2="40" stroke="#e84888" stroke-width="5" stroke-linecap="round"/>
+    <line x1="74" y1="18" x2="74" y2="40" stroke="#e84888" stroke-width="5" stroke-linecap="round"/>
+    <!-- Heart inside calendar -->
+    <path d="M56 110 C56 110, 30 90, 30 76 C30 67, 37 61, 44 61 C50 61, 54 65, 56 70 C58 65, 62 61, 68 61 C75 61, 82 67, 82 76 C82 90, 56 110, 56 110Z"
+          fill="url(#brand)"/>
+  </g>
+
+  <!-- ─── Wordmark (white for dark backgrounds) ─── -->
+  <g transform="translate(148, 52)">
+    <!-- "Date" in solid white -->
+    <text font-family="'Manrope', 'Inter', 'SF Pro Display', system-ui, -apple-system, sans-serif"
+          font-size="72" font-weight="800" letter-spacing="-2" fill="#ffffff" y="58">
+      Date
+    </text>
+    <!-- "Flo" in solid gradient -->
+    <text font-family="'Manrope', 'Inter', 'SF Pro Display', system-ui, -apple-system, sans-serif"
+          font-size="72" font-weight="800" letter-spacing="-2" fill="url(#brand)" x="198" y="58">
+      Flo
+    </text>
+  </g>
+
+  <!-- ─── Flow accent swoosh ─── -->
+  <path d="M150 126 Q260 138, 370 120 Q420 112, 460 126"
+        fill="none" stroke="url(#swoosh)" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- ─── Dot accent ─── -->
+  <circle cx="465" cy="124" r="4.5" fill="#e84888"/>
+</svg>
