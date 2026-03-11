@@ -1,6 +1,6 @@
 // Google Apps Script: paste into a NEW Google Sheet's Apps Script editor
 // Sheet should have one tab called "Early Signups" with headers:
-// Timestamp | Name | Phone | Year
+// Timestamp | Name | Phone | Year | Status
 
 function doPost(e) {
   try {
@@ -10,13 +10,14 @@ function doPost(e) {
       var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Early Signups');
       if (!sheet) {
         sheet = SpreadsheetApp.getActiveSpreadsheet().insertSheet('Early Signups');
-        sheet.appendRow(['Timestamp', 'Name', 'Phone', 'Year']);
+        sheet.appendRow(['Timestamp', 'Name', 'Phone', 'Year', 'Status']);
       }
       sheet.appendRow([
         new Date().toLocaleString(),
         data.name || '',
         data.phone || '',
-        data.year || ''
+        data.year || '',
+        data.status || ''
       ]);
     }
 

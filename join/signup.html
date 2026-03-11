@@ -226,6 +226,15 @@
         </select>
       </div>
 
+      <div class="field">
+        <label>Status</label>
+        <select id="status" required>
+          <option value="" disabled selected>Single or taken?</option>
+          <option value="Single">Single</option>
+          <option value="Taken">Taken</option>
+        </select>
+      </div>
+
       <button type="submit" class="btn" id="submitBtn">Join the Waitlist</button>
       <p class="error-msg" id="errorMsg"></p>
     </form>
@@ -252,8 +261,9 @@
       const name = document.getElementById('name').value.trim();
       const phone = document.getElementById('phone').value.trim();
       const year = document.getElementById('year').value;
+      const status = document.getElementById('status').value;
 
-      if (!name || !phone || !year) {
+      if (!name || !phone || !year || !status) {
         errorMsg.textContent = 'Please fill in all fields.';
         errorMsg.style.display = 'block';
         return;
@@ -268,6 +278,7 @@
           name: name,
           phone: phone,
           year: year,
+          status: status,
           timestamp: new Date().toISOString()
         };
 
