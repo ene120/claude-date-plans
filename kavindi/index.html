@@ -292,6 +292,13 @@
     /* Happy Hour (amber) */
     .info-btn-hh{color:#b45309;border-color:#fde68a;background:linear-gradient(135deg,#fef9ee,#fef3c7)}
     .info-btn-hh:hover{box-shadow:0 4px 14px rgba(245,158,11,.12)}
+    /* No Happy Hour (muted) */
+    .info-btn-hh-none{color:#9ca3af;border-color:#e5e7eb;background:linear-gradient(135deg,#fafafa,#f3f4f6);cursor:default;font-weight:500}
+    .info-btn-hh-none:hover{transform:none;box-shadow:none}
+    /* Deals (teal — for activities) */
+    .info-btn-deals{color:#0d7377;border-color:#99f6e4;background:linear-gradient(135deg,#f0fdfa,#ccfbf1)}
+    .info-btn-deals:hover{box-shadow:0 4px 14px rgba(13,115,119,.12)}
+    .info-panel-deals{background:linear-gradient(135deg,#f0fdfa,#ccfbf1);border:2px solid #99f6e4;padding:clamp(14px,2.5vw,18px) clamp(16px,3vw,22px)}
 
     /* ── Dropdown Panels ── */
     .info-panel{display:none;border-radius:14px;overflow:hidden;margin-top:8px}
@@ -628,6 +635,7 @@
         </div>
         <div class="info-btns">
           <button class="info-btn info-btn-photos" onclick="togglePanel(this,'panelA2p')"><i data-lucide="camera" style="width:14px;height:14px"></i> Photos <span class="chev">&#9660;</span></button>
+          <span class="info-btn info-btn-hh-none"><i data-lucide="clock" style="width:14px;height:14px"></i> No Happy Hour</span>
           <button class="info-btn info-btn-reviews" onclick="togglePanel(this,'panelA2r')"><i data-lucide="star" style="width:14px;height:14px"></i> Reviews <span class="chev">&#9660;</span></button>
         </div>
         <div class="info-panel info-panel-photos" id="panelA2p">
@@ -841,6 +849,7 @@
         </div>
         <div class="info-btns">
           <button class="info-btn info-btn-photos-b" onclick="togglePanel(this,'panelB2p')"><i data-lucide="camera" style="width:14px;height:14px"></i> Photos <span class="chev">&#9660;</span></button>
+          <span class="info-btn info-btn-hh-none"><i data-lucide="clock" style="width:14px;height:14px"></i> No Happy Hour</span>
           <button class="info-btn info-btn-reviews" onclick="togglePanel(this,'panelB2r')"><i data-lucide="star" style="width:14px;height:14px"></i> Reviews <span class="chev">&#9660;</span></button>
         </div>
         <div class="info-panel info-panel-photos" id="panelB2p">
@@ -899,6 +908,7 @@
         </div>
         <div class="info-btns">
           <button class="info-btn info-btn-photos-b" onclick="togglePanel(this,'panelB3p')"><i data-lucide="camera" style="width:14px;height:14px"></i> Photos <span class="chev">&#9660;</span></button>
+          <span class="info-btn info-btn-hh-none"><i data-lucide="clock" style="width:14px;height:14px"></i> No Happy Hour</span>
           <button class="info-btn info-btn-reviews" onclick="togglePanel(this,'panelB3r')"><i data-lucide="star" style="width:14px;height:14px"></i> Reviews <span class="chev">&#9660;</span></button>
         </div>
         <div class="info-panel info-panel-photos" id="panelB3p">
