@@ -710,7 +710,7 @@
         <div class="transport-corner">
           <div class="tc-group"><div class="tc-label">Rides</div><div class="tc-btns">
             <a href="https://m.uber.com/ul/?action=setPickup&dropoff[formatted_address]=1549%20El%20Prado%2C%20San%20Diego%2C%20CA%2092101" target="_blank" class="tc-btn tc-uber">Uber</a>
-            <a href="https://www.lyft.com/ride?destination[address]=1549%20El%20Prado%2C%20San%20Diego%2C%20CA%2092101" target="_blank" class="tc-btn tc-lyft">Lyft</a>
+            <a href="https://lyft.com/ride?id=lyft&destination[latitude]=32.7341&destination[longitude]=-117.1441" target="_blank" class="tc-btn tc-lyft">Lyft</a>
           </div></div>
           <div class="tc-group"><div class="tc-label">Parking</div><div class="tc-btns">
             <a href="https://www.google.com/maps/place/Inspiration+Point+Parking+Lot,+San+Diego,+CA+92101" target="_blank" class="tc-btn tc-free">Free</a>
@@ -729,17 +729,13 @@
         </div>
         <div class="info-btns">
           <button class="info-btn info-btn-reviews" onclick="togglePanel(this,'panelA1r')"><i data-lucide="star" style="width:14px;height:14px"></i> Reviews <span class="chev">&#9660;</span></button>
-          <button class="info-btn info-btn-vibe" onclick="togglePanel(this,'panelA1v')"><i data-lucide="camera" style="width:14px;height:14px"></i> Venue Vibe <span class="chev">&#9660;</span></button>
+          <button class="info-btn info-btn-vibe" onclick="togglePanel(this,'panelA1v')"><i data-lucide="camera" style="width:14px;height:14px"></i> Venue <span class="chev">&#9660;</span></button>
         </div>
         <div class="info-panel info-panel-reviews" id="panelA1r">
           <div class="review-box">
             <a class="review-badge" href="https://www.google.com/maps/place/Balboa+Park" target="_blank"><img class="review-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/120px-Google_%22G%22_logo.svg.png" alt="Google"><div class="review-info"><div><span class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <span class="review-rating">4.8</span></div><div class="review-count">58,000+ reviews</div></div></a>
             <a class="review-badge" href="https://www.yelp.com/biz/balboa-park-san-diego" target="_blank"><img class="review-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Yelp_Logo.svg/120px-Yelp_Logo.svg.png" alt="Yelp"><div class="review-info"><div><span class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <span class="review-rating">4.6</span></div><div class="review-count">2,300+ reviews</div></div></a>
           </div>
-        </div>
-        <div class="description">
-          <p>Start at <strong>Cabrillo Bridge</strong> for skyline views, then walk the <strong>El Prado colonnade</strong> &mdash; the afternoon light filtering through the arches is gorgeous. Hit the <strong>Lily Pond &amp; Botanical Building</strong> (the most photographed spot in the park), then wander through <strong>Alcazar Garden</strong> with its Moorish tiles and fountain. If you want a hidden gem, duck into <strong>Zoro Garden</strong> &mdash; a secret sunken stone garden that feels like it was made for two.</p>
-          <p><strong>Free.</strong> Open sunrise to sunset. About 40&ndash;50 min at a comfortable pace.</p>
         </div>
         <div class="info-panel info-panel-vibe" id="panelA1v">
           <div class="vibe-slider" data-slider>
@@ -755,6 +751,10 @@
           </div>
           <div class="vibe-dots"></div>
           <div class="vibe-slider-caption">Botanical Building, Lily Pond & Alcazar Garden</div>
+        </div>
+        <div class="description">
+          <p>Start at <strong>Cabrillo Bridge</strong> for skyline views, then walk the <strong>El Prado colonnade</strong> &mdash; the afternoon light filtering through the arches is gorgeous. Hit the <strong>Lily Pond &amp; Botanical Building</strong> (the most photographed spot in the park), then wander through <strong>Alcazar Garden</strong> with its Moorish tiles and fountain. If you want a hidden gem, duck into <strong>Zoro Garden</strong> &mdash; a secret sunken stone garden that feels like it was made for two.</p>
+          <p><strong>Free.</strong> Open sunrise to sunset. About 40&ndash;50 min at a comfortable pace.</p>
         </div>
         <div class="swap-box">
           <button class="swap-box-toggle" onclick="this.parentElement.classList.toggle('open')">
@@ -784,7 +784,7 @@
         <div class="transport-corner">
           <div class="tc-group"><div class="tc-label">Rides</div><div class="tc-btns">
             <a href="https://m.uber.com/ul/?action=setPickup&dropoff[formatted_address]=4681%20Convoy%20St%2C%20San%20Diego%2C%20CA%2092111" target="_blank" class="tc-btn tc-uber">Uber</a>
-            <a href="https://www.lyft.com/ride?destination[address]=4681%20Convoy%20St%2C%20San%20Diego%2C%20CA%2092111" target="_blank" class="tc-btn tc-lyft">Lyft</a>
+            <a href="https://lyft.com/ride?id=lyft&destination[latitude]=32.8182&destination[longitude]=-117.1535" target="_blank" class="tc-btn tc-lyft">Lyft</a>
           </div></div>
           <div class="tc-group"><div class="tc-label">Parking</div><div class="tc-btns">
             <a href="https://www.google.com/maps/search/parking+near+4681+Convoy+St+San+Diego+CA+92111" target="_blank" class="tc-btn tc-free">Free Lot</a>
@@ -805,7 +805,7 @@
         <div class="info-btns">
           <button class="info-btn info-btn-hh" onclick="togglePanel(this,'panelA2h')"><i data-lucide="beer" style="width:14px;height:14px"></i> Happy Hour <span class="chev">&#9660;</span></button>
           <button class="info-btn info-btn-reviews" onclick="togglePanel(this,'panelA2r')"><i data-lucide="star" style="width:14px;height:14px"></i> Reviews <span class="chev">&#9660;</span></button>
-          <button class="info-btn info-btn-vibe" onclick="togglePanel(this,'panelA2v')"><i data-lucide="camera" style="width:14px;height:14px"></i> Venue Vibe <span class="chev">&#9660;</span></button>
+          <button class="info-btn info-btn-vibe" onclick="togglePanel(this,'panelA2v')"><i data-lucide="camera" style="width:14px;height:14px"></i> Venue <span class="chev">&#9660;</span></button>
         </div>
         <div class="info-panel info-panel-hh" id="panelA2h">
           <div class="hh-header"><span class="hh-icon">&#127866;</span><span class="hh-label">Happy Hour</span></div>
@@ -822,6 +822,21 @@
             <a class="review-badge" href="https://www.google.com/maps/place/Steamy+Piggy+San+Diego" target="_blank"><img class="review-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/120px-Google_%22G%22_logo.svg.png" alt="Google"><div class="review-info"><div><span class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span> <span class="review-rating">4.4</span></div><div class="review-count">3,800+ reviews</div></div></a>
             <a class="review-badge" href="https://www.yelp.com/biz/steamy-piggy-san-diego" target="_blank"><img class="review-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Yelp_Logo.svg/120px-Yelp_Logo.svg.png" alt="Yelp"><div class="review-info"><div><span class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span> <span class="review-rating">4.2</span></div><div class="review-count">4,200+ reviews</div></div></a>
           </div>
+        </div>
+        <div class="info-panel info-panel-vibe" id="panelA2v">
+          <div class="vibe-slider" data-slider>
+            <button class="vibe-slider-btn prev" onclick="slideVibe(this,-1)">‹</button>
+            <div class="vibe-slider-track">
+              <img src="https://ucsdguardian.org/wp-content/uploads/2023/02/steamy-piggy-courtesy-of-Kirbies-Cravings-1200x900.jpeg" alt="Steamy Piggy Interior" loading="lazy">
+              <img src="https://sandiegomagazine.com/wp-content/uploads/2023/08/760a986f0fcb066c5725724788b80f7b.jpg" alt="Piggy Bao Dish" loading="lazy">
+              <img src="https://resizer.otstatic.com/v2/photos/large/4/26206851.jpg" alt="Steamy Piggy Dining Room" loading="lazy">
+              <img src="https://media.sandiegoreader.com/img/places/steamy_piggy_exterior_t670_t800.jpg?90232451fbcadccc64a17de7521d859a8f88077d" alt="Steamy Piggy Exterior" loading="lazy">
+              <img src="https://resizer.otstatic.com/v2/photos/large/4/26206795.jpg" alt="Steamy Piggy Ambiance" loading="lazy">
+            </div>
+            <button class="vibe-slider-btn next" onclick="slideVibe(this,1)">›</button>
+          </div>
+          <div class="vibe-dots"></div>
+          <div class="vibe-slider-caption">Interior, dishes & exterior — Convoy St</div>
         </div>
         <div class="description">
           <p>A popular Chinese fusion spot with Instagram-worthy pink decor and a bonfire patio. The menu blends Chinese, Korean, and Japanese flavors &mdash; dumplings, bao buns, ramen, and chow mein that go way beyond takeout. <strong>Happy hour runs 4&ndash;6:30 PM</strong> with deals on apps and drinks &mdash; your timing is perfect.</p>
@@ -844,21 +859,6 @@
               <div class="food-rec-dish"><div class="food-rec-item">Kawaii Buns ($10)</div><div class="food-rec-note">4 custard-filled steamed buns shaped like tiny pigs. Adorable and sweet &mdash; Sandy will love these.</div></div>
             </div>
           </div>
-        </div>
-        <div class="info-panel info-panel-vibe" id="panelA2v">
-          <div class="vibe-slider" data-slider>
-            <button class="vibe-slider-btn prev" onclick="slideVibe(this,-1)">‹</button>
-            <div class="vibe-slider-track">
-              <img src="https://ucsdguardian.org/wp-content/uploads/2023/02/steamy-piggy-courtesy-of-Kirbies-Cravings-1200x900.jpeg" alt="Steamy Piggy Interior" loading="lazy">
-              <img src="https://sandiegomagazine.com/wp-content/uploads/2023/08/760a986f0fcb066c5725724788b80f7b.jpg" alt="Piggy Bao Dish" loading="lazy">
-              <img src="https://resizer.otstatic.com/v2/photos/large/4/26206851.jpg" alt="Steamy Piggy Dining Room" loading="lazy">
-              <img src="https://media.sandiegoreader.com/img/places/steamy_piggy_exterior_t670_t800.jpg?90232451fbcadccc64a17de7521d859a8f88077d" alt="Steamy Piggy Exterior" loading="lazy">
-              <img src="https://resizer.otstatic.com/v2/photos/large/4/26206795.jpg" alt="Steamy Piggy Ambiance" loading="lazy">
-            </div>
-            <button class="vibe-slider-btn next" onclick="slideVibe(this,1)">›</button>
-          </div>
-          <div class="vibe-dots"></div>
-          <div class="vibe-slider-caption">Interior, dishes & exterior — Convoy St</div>
         </div>
         <div class="swap-box">
           <button class="swap-box-toggle" onclick="this.parentElement.classList.toggle('open')">
@@ -903,16 +903,12 @@
         <div class="info-btns">
           <span class="info-btn info-btn-hh-none"><i data-lucide="clock" style="width:14px;height:14px"></i> No Happy Hour</span>
           <button class="info-btn info-btn-reviews" onclick="togglePanel(this,'panelA3r')"><i data-lucide="star" style="width:14px;height:14px"></i> Reviews <span class="chev">&#9660;</span></button>
-          <button class="info-btn info-btn-vibe" onclick="togglePanel(this,'panelA3v')"><i data-lucide="camera" style="width:14px;height:14px"></i> Venue Vibe <span class="chev">&#9660;</span></button>
+          <button class="info-btn info-btn-vibe" onclick="togglePanel(this,'panelA3v')"><i data-lucide="camera" style="width:14px;height:14px"></i> Venue <span class="chev">&#9660;</span></button>
         </div>
         <div class="info-panel info-panel-reviews" id="panelA3r">
           <div class="review-box">
             <a class="review-badge" href="https://www.yelp.com/biz/yun-tea-house-san-diego" target="_blank"><img class="review-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Yelp_Logo.svg/120px-Yelp_Logo.svg.png" alt="Yelp"><div class="review-info"><div><span class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <span class="review-rating">5.0</span></div><div class="review-count">3,265 reviews</div></div></a>
           </div>
-        </div>
-        <div class="description">
-          <p>The highest-rated tea house in San Diego &mdash; 5.0 stars on 3,265 Yelp reviews, which is almost unheard of. Cozy cloud-themed decor, specialty boba teas, and mango sticky rice. The staff offers free samples to help you choose. A sweet, low-key way to wind down the date.</p>
-          <p><strong>Saturday hours:</strong> 11 AM &ndash; 11:45 PM. No rush.</p>
         </div>
         <div class="info-panel info-panel-vibe" id="panelA3v">
           <div class="vibe-slider" data-slider>
@@ -928,6 +924,10 @@
           </div>
           <div class="vibe-dots"></div>
           <div class="vibe-slider-caption">Cloud-themed interior & specialty boba</div>
+        </div>
+        <div class="description">
+          <p>The highest-rated tea house in San Diego &mdash; 5.0 stars on 3,265 Yelp reviews, which is almost unheard of. Cozy cloud-themed decor, specialty boba teas, and mango sticky rice. The staff offers free samples to help you choose. A sweet, low-key way to wind down the date.</p>
+          <p><strong>Saturday hours:</strong> 11 AM &ndash; 11:45 PM. No rush.</p>
         </div>
         <div class="swap-box">
           <button class="swap-box-toggle" onclick="this.parentElement.classList.toggle('open')">
@@ -1028,7 +1028,7 @@
         <div class="transport-corner">
           <div class="tc-group"><div class="tc-label">Rides</div><div class="tc-btns">
             <a href="https://m.uber.com/ul/?action=setPickup&dropoff[formatted_address]=1100%20Coast%20Blvd%2C%20La%20Jolla%2C%20CA%2092037" target="_blank" class="tc-btn tc-uber">Uber</a>
-            <a href="https://www.lyft.com/ride?destination[address]=1100%20Coast%20Blvd%2C%20La%20Jolla%2C%20CA%2092037" target="_blank" class="tc-btn tc-lyft">Lyft</a>
+            <a href="https://lyft.com/ride?id=lyft&destination[latitude]=32.8503&destination[longitude]=-117.2728" target="_blank" class="tc-btn tc-lyft">Lyft</a>
           </div></div>
           <div class="tc-group"><div class="tc-label">Parking</div><div class="tc-btns">
             <a href="https://www.google.com/maps/place/Coast+Blvd,+La+Jolla,+CA+92037" target="_blank" class="tc-btn tc-free">Free Street</a>
@@ -1045,18 +1045,13 @@
         </div>
         <div class="info-btns">
           <button class="info-btn info-btn-reviews" onclick="togglePanel(this,'panelB1r')"><i data-lucide="star" style="width:14px;height:14px"></i> Reviews <span class="chev">&#9660;</span></button>
-          <button class="info-btn info-btn-vibe" onclick="togglePanel(this,'panelB1v')"><i data-lucide="camera" style="width:14px;height:14px"></i> Venue Vibe <span class="chev">&#9660;</span></button>
+          <button class="info-btn info-btn-vibe" onclick="togglePanel(this,'panelB1v')"><i data-lucide="camera" style="width:14px;height:14px"></i> Venue <span class="chev">&#9660;</span></button>
         </div>
         <div class="info-panel info-panel-reviews" id="panelB1r">
           <div class="review-box">
             <a class="review-badge" href="https://www.google.com/maps/place/La+Jolla+Cove" target="_blank"><img class="review-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/120px-Google_%22G%22_logo.svg.png" alt="Google"><div class="review-info"><div><span class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <span class="review-rating">4.8</span></div><div class="review-count">28,000+ reviews</div></div></a>
             <a class="review-badge" href="https://www.yelp.com/biz/la-jolla-cove-la-jolla" target="_blank"><img class="review-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Yelp_Logo.svg/120px-Yelp_Logo.svg.png" alt="Yelp"><div class="review-info"><div><span class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <span class="review-rating">4.5</span></div><div class="review-count">1,800+ reviews</div></div></a>
           </div>
-        </div>
-        <div class="description">
-          <p>Start at <strong>Scripps Park</strong> overlooking the cove, then walk south along <strong>Coast Boulevard</strong> past the sea lion colony. Pick up the <strong>Coast Walk Trail</strong> &mdash; 0.6 miles along the bluffs above seven sea caves with dramatic cliff views and ocean spray. Easy walking, incredible photos. Finish near Goldfish Point and head uphill to the village for dinner.</p>
-          <p><strong>Free.</strong> Open sunrise to sunset. About 35&ndash;50 min. Sunset is at <strong>6:55 PM</strong> &mdash; you&rsquo;ll have gorgeous golden light the whole walk.</p>
-          <p><strong>Parking tip:</strong> Free street parking on the south end of Coast Blvd (300&ndash;500 block) has no time limit on weekends. Try there first, then fall back to the Coast Walk Garage ($5&ndash;10/hr). You can keep the same parking spot for the whole date &mdash; dinner is a 10 min walk uphill.</p>
         </div>
         <div class="info-panel info-panel-vibe" id="panelB1v">
           <div class="vibe-slider" data-slider>
@@ -1072,6 +1067,11 @@
           </div>
           <div class="vibe-dots"></div>
           <div class="vibe-slider-caption">La Jolla Cove, Coast Walk Trail & sea caves</div>
+        </div>
+        <div class="description">
+          <p>Start at <strong>Scripps Park</strong> overlooking the cove, then walk south along <strong>Coast Boulevard</strong> past the sea lion colony. Pick up the <strong>Coast Walk Trail</strong> &mdash; 0.6 miles along the bluffs above seven sea caves with dramatic cliff views and ocean spray. Easy walking, incredible photos. Finish near Goldfish Point and head uphill to the village for dinner.</p>
+          <p><strong>Free.</strong> Open sunrise to sunset. About 35&ndash;50 min. Sunset is at <strong>6:55 PM</strong> &mdash; you&rsquo;ll have gorgeous golden light the whole walk.</p>
+          <p><strong>Parking tip:</strong> Free street parking on the south end of Coast Blvd (300&ndash;500 block) has no time limit on weekends. Try there first, then fall back to the Coast Walk Garage ($5&ndash;10/hr). You can keep the same parking spot for the whole date &mdash; dinner is a 10 min walk uphill.</p>
         </div>
         <div class="transit-tag"><i data-lucide="footprints" style="width:14px;height:14px"></i> ~10 min walk uphill to Catania</div>
         <div class="stop-fb" id="sfb-B1">
@@ -1092,7 +1092,7 @@
         <div class="transport-corner">
           <div class="tc-group"><div class="tc-label">Parking</div><div class="tc-btns">
             <a href="https://www.google.com/maps/place/Coast+Blvd,+La+Jolla,+CA+92037" target="_blank" class="tc-btn tc-free">Keep Spot</a>
-            <a href="https://www.google.com/maps/search/Wall+Street+parking+garage+La+Jolla" target="_blank" class="tc-btn tc-paid">Garage</a>
+            <a href="https://www.google.com/maps/search/La+Plaza+parking+garage+La+Jolla+Girard+Wall" target="_blank" class="tc-btn tc-paid">La Plaza Garage</a>
           </div></div>
         </div>
         <div class="stop-header">
@@ -1109,13 +1109,28 @@
         <div class="info-btns">
           <span class="info-btn info-btn-hh-none"><i data-lucide="clock" style="width:14px;height:14px"></i> No Happy Hour</span>
           <button class="info-btn info-btn-reviews" onclick="togglePanel(this,'panelB2r')"><i data-lucide="star" style="width:14px;height:14px"></i> Reviews <span class="chev">&#9660;</span></button>
-          <button class="info-btn info-btn-vibe" onclick="togglePanel(this,'panelB2v')"><i data-lucide="camera" style="width:14px;height:14px"></i> Venue Vibe <span class="chev">&#9660;</span></button>
+          <button class="info-btn info-btn-vibe" onclick="togglePanel(this,'panelB2v')"><i data-lucide="camera" style="width:14px;height:14px"></i> Venue <span class="chev">&#9660;</span></button>
         </div>
         <div class="info-panel info-panel-reviews" id="panelB2r">
           <div class="review-box">
             <a class="review-badge" href="https://www.google.com/maps/place/Catania+La+Jolla" target="_blank"><img class="review-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/120px-Google_%22G%22_logo.svg.png" alt="Google"><div class="review-info"><div><span class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span> <span class="review-rating">4.5</span></div><div class="review-count">1,200+ reviews</div></div></a>
             <a class="review-badge" href="https://www.opentable.com/r/catania-san-diego" target="_blank"><img class="review-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Yelp_Logo.svg/120px-Yelp_Logo.svg.png" alt="OpenTable"><div class="review-info"><div><span class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <span class="review-rating">4.8</span></div><div class="review-count">2,292 reviews</div></div></a>
           </div>
+        </div>
+        <div class="info-panel info-panel-vibe" id="panelB2v">
+          <div class="vibe-slider" data-slider>
+            <button class="vibe-slider-btn prev" onclick="slideVibe(this,-1)">‹</button>
+            <div class="vibe-slider-track">
+              <img src="https://images.squarespace-cdn.com/content/v1/5983545e3e00beb836b4eb0b/1662507502746-CJNSWBUVOGBQQCGJYBEH/image-asset.jpeg" alt="Catania Interior" loading="lazy">
+              <img src="https://images.squarespace-cdn.com/content/v1/5983545e3e00beb836b4eb0b/1662089500020-5S4QI6BH0NGG4NVHZ4JA/image-asset.jpeg" alt="Catania Terrace" loading="lazy">
+              <img src="https://images.squarespace-cdn.com/content/v1/5983545e3e00beb836b4eb0b/1661558391640-K2BAL326222QEHVIZC76/image-asset.jpeg" alt="Catania Dining" loading="lazy">
+              <img src="https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/f18c8747ec5b4c91b78e609ab4473e39.jpeg" alt="Catania Michelin" loading="lazy">
+              <img src="https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/85f6b60edf6c4cfca41086ab7f4ae77b.jpeg" alt="Catania Ocean View" loading="lazy">
+            </div>
+            <button class="vibe-slider-btn next" onclick="slideVibe(this,1)">›</button>
+          </div>
+          <div class="vibe-dots"></div>
+          <div class="vibe-slider-caption">3rd-floor terrace, ocean views & Mediterranean interior</div>
         </div>
         <div class="description">
           <p>Contemporary Italian coastal cuisine on the 3rd floor of La Plaza, with <strong>panoramic ocean views from an elegant terrace</strong>. Mediterranean tiles, warm lighting, and the kind of atmosphere that makes a Saturday night feel special. The crudo and wood-fired dishes are outstanding, and the service is consistently praised as attentive without being overbearing &mdash; exactly what you&rsquo;re looking for.</p>
@@ -1134,21 +1149,6 @@
             <div class="food-rec-dish"><div class="food-rec-item">Ribeye or braised meat dish</div><div class="food-rec-note">Red meat is always on the menu here &mdash; the ribeye or duck sugo orecchiette are both excellent choices. Call to confirm the current red meat options.</div></div>
             <div class="food-rec-dish"><div class="food-rec-item">Save room for dessert downstairs</div><div class="food-rec-note">Bobboi Gelato is literally in the same building &mdash; skip restaurant dessert and grab the best gelato in San Diego instead.</div></div>
           </div>
-        </div>
-        <div class="info-panel info-panel-vibe" id="panelB2v">
-          <div class="vibe-slider" data-slider>
-            <button class="vibe-slider-btn prev" onclick="slideVibe(this,-1)">‹</button>
-            <div class="vibe-slider-track">
-              <img src="https://images.squarespace-cdn.com/content/v1/5983545e3e00beb836b4eb0b/1662507502746-CJNSWBUVOGBQQCGJYBEH/image-asset.jpeg" alt="Catania Interior" loading="lazy">
-              <img src="https://images.squarespace-cdn.com/content/v1/5983545e3e00beb836b4eb0b/1662089500020-5S4QI6BH0NGG4NVHZ4JA/image-asset.jpeg" alt="Catania Terrace" loading="lazy">
-              <img src="https://images.squarespace-cdn.com/content/v1/5983545e3e00beb836b4eb0b/1661558391640-K2BAL326222QEHVIZC76/image-asset.jpeg" alt="Catania Dining" loading="lazy">
-              <img src="https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/f18c8747ec5b4c91b78e609ab4473e39.jpeg" alt="Catania Michelin" loading="lazy">
-              <img src="https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/85f6b60edf6c4cfca41086ab7f4ae77b.jpeg" alt="Catania Ocean View" loading="lazy">
-            </div>
-            <button class="vibe-slider-btn next" onclick="slideVibe(this,1)">›</button>
-          </div>
-          <div class="vibe-dots"></div>
-          <div class="vibe-slider-caption">3rd-floor terrace, ocean views & Mediterranean interior</div>
         </div>
         <div class="swap-box">
           <button class="swap-box-toggle" onclick="this.parentElement.classList.toggle('open')">
@@ -1187,17 +1187,13 @@
         <div class="info-btns">
           <span class="info-btn info-btn-hh-none"><i data-lucide="clock" style="width:14px;height:14px"></i> No Happy Hour</span>
           <button class="info-btn info-btn-reviews" onclick="togglePanel(this,'panelB3r')"><i data-lucide="star" style="width:14px;height:14px"></i> Reviews <span class="chev">&#9660;</span></button>
-          <button class="info-btn info-btn-vibe" onclick="togglePanel(this,'panelB3v')"><i data-lucide="camera" style="width:14px;height:14px"></i> Venue Vibe <span class="chev">&#9660;</span></button>
+          <button class="info-btn info-btn-vibe" onclick="togglePanel(this,'panelB3v')"><i data-lucide="camera" style="width:14px;height:14px"></i> Venue <span class="chev">&#9660;</span></button>
         </div>
         <div class="info-panel info-panel-reviews" id="panelB3r">
           <div class="review-box">
             <a class="review-badge" href="https://www.google.com/maps/place/Bobboi+Natural+Gelato+La+Jolla" target="_blank"><img class="review-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/120px-Google_%22G%22_logo.svg.png" alt="Google"><div class="review-info"><div><span class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <span class="review-rating">4.8</span></div><div class="review-count">1,500+ reviews</div></div></a>
             <a class="review-badge" href="https://www.tripadvisor.com/Restaurant_Review-Bobboi_Natural_Gelato" target="_blank"><img class="review-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Yelp_Logo.svg/120px-Yelp_Logo.svg.png" alt="TripAdvisor"><div class="review-info"><div><span class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <span class="review-rating">4.9</span></div><div class="review-count">721 reviews</div></div></a>
           </div>
-        </div>
-        <div class="description">
-          <p>Widely considered the best gelato in San Diego and once named the most popular frozen dessert spot in the entire country. 18 daily flavors, all made from scratch with local, seasonal, organic ingredients. Grab a cup and stroll Girard Avenue or Prospect Street in the blue-hour glow &mdash; a perfect ending.</p>
-          <p><strong>Saturday hours:</strong> 11 AM &ndash; 10 PM.</p>
         </div>
         <div class="info-panel info-panel-vibe" id="panelB3v">
           <div class="vibe-slider" data-slider>
@@ -1212,6 +1208,10 @@
           </div>
           <div class="vibe-dots"></div>
           <div class="vibe-slider-caption">Artisan gelato & La Jolla Village vibes</div>
+        </div>
+        <div class="description">
+          <p>Widely considered the best gelato in San Diego and once named the most popular frozen dessert spot in the entire country. 18 daily flavors, all made from scratch with local, seasonal, organic ingredients. Grab a cup and stroll Girard Avenue or Prospect Street in the blue-hour glow &mdash; a perfect ending.</p>
+          <p><strong>Saturday hours:</strong> 11 AM &ndash; 10 PM.</p>
         </div>
         <div class="stop-fb" id="sfb-B3">
           <div class="stop-fb-label">How was this stop?</div>
