@@ -443,10 +443,20 @@
     .food-rec-shared .food-rec-dishes{display:grid;grid-template-columns:1fr 1fr;gap:10px}
     @media(max-width:480px){.food-recs{grid-template-columns:1fr}.food-rec-shared .food-rec-dishes{grid-template-columns:1fr}}
 
-    /* ── Swap Box ── */
-    .swap-box{background:var(--cream);border:3px dashed var(--wing-pink);border-radius:14px;padding:14px 18px;margin:16px 0}
-    .swap-box-title{font-size:clamp(.72rem,1.1vw,.78rem);font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--cupid);margin-bottom:6px}
-    .swap-box p{font-size:clamp(.82rem,1.4vw,.88rem);color:var(--text-muted);line-height:1.6}
+    /* ── Swap Box (Dropdown) ── */
+    .swap-box{background:var(--cream);border:3px dashed var(--wing-pink);border-radius:14px;margin:16px 0;overflow:hidden}
+    .swap-box-toggle{
+      display:flex;align-items:center;justify-content:space-between;width:100%;
+      padding:14px 18px;cursor:pointer;border:none;background:transparent;
+      font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text",system-ui,sans-serif;
+      text-align:left;
+    }
+    .swap-box-title{font-size:clamp(.72rem,1.1vw,.78rem);font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--cupid);margin:0}
+    .swap-box-arrow{font-size:.7rem;color:var(--cupid);transition:transform .3s ease}
+    .swap-box.open .swap-box-arrow{transform:rotate(180deg)}
+    .swap-box-content{max-height:0;overflow:hidden;transition:max-height .3s ease;padding:0 18px}
+    .swap-box.open .swap-box-content{max-height:300px;padding:0 18px 14px}
+    .swap-box-content p{font-size:clamp(.82rem,1.4vw,.88rem);color:var(--text-muted);line-height:1.6}
     .swap-box a{color:var(--cupid);font-weight:600;text-decoration:none}
 
     /* ── Stop Feedback ── */
@@ -609,8 +619,6 @@
     <div class="cupid-icon" id="heroEmoji">&#128152;</div>
     <div class="hero-brand">DateFlo</div>
     <h1 id="heroTitle">Kavindi&rsquo;s <span>Monday Date</span></h1>
-    <p class="hero-sub" id="heroSub">Two curated plans for <strong>Monday, March 30, 2026</strong>. Pick the one that feels right.</p>
-    <p class="hero-note" id="heroNote">Both plans take you out of Mira Mesa to somewhere special. Great food, beautiful views, and quality time together.</p>
 
     <div class="hero-buttons">
       <a class="hero-btn hero-btn-primary" href="#" onclick="showOption('A');return false;">🌅 Plan A: Golden Hour</a>
@@ -645,7 +653,6 @@
         <span class="card-cta">View This Date &rarr;</span>
       </div>
     </div>
-    <p class="arrow-hint">&darr; tap a card to see the full plan</p>
   </div>
 
   <!-- ══════════ PLAN A: GOLDEN HOUR ══════════ -->
@@ -901,10 +908,15 @@
 
       <!-- Swap -->
       <div class="swap-box">
-        <h4>&#128260; Just in Case</h4>
-        <p>We always have a backup ready for you. <strong>If OB Noodle House is packed:</strong> You could try <strong>The Joint OB</strong> at 4902 Newport Ave. Great sushi and tapas, happy hour daily 12 to 6 PM. Same OB vibe, still within budget.</p>
-        <p style="margin-top:8px"><strong>If An&rsquo;s Gelato has a long line:</strong> You could try <strong>Lighthouse Ice Cream</strong> at 5059 Newport Ave. Family-owned, gourmet scoops, open Mon 12 to 8 PM.</p>
-        <p style="margin-top:8px"><strong>If weather turns cloudy:</strong> You could skip the beach stroll, head straight to Sunset Cliffs, and enjoy a moody sunset together instead.</p>
+        <button class="swap-box-toggle" onclick="this.parentElement.classList.toggle('open')">
+          <div class="swap-box-title">&#128260; Just in Case</div>
+          <span class="swap-box-arrow">▼</span>
+        </button>
+        <div class="swap-box-content">
+          <p>We always have a backup ready for you. <strong>If OB Noodle House is packed:</strong> You could try <strong>The Joint OB</strong> at 4902 Newport Ave. Great sushi and tapas, happy hour daily 12 to 6 PM. Same OB vibe, still within budget.</p>
+          <p style="margin-top:8px"><strong>If An&rsquo;s Gelato has a long line:</strong> You could try <strong>Lighthouse Ice Cream</strong> at 5059 Newport Ave. Family-owned, gourmet scoops, open Mon 12 to 8 PM.</p>
+          <p style="margin-top:8px"><strong>If weather turns cloudy:</strong> You could skip the beach stroll, head straight to Sunset Cliffs, and enjoy a moody sunset together instead.</p>
+        </div>
       </div>
 
       <!-- Budget -->
@@ -1197,10 +1209,15 @@
 
       <!-- Swap -->
       <div class="swap-box">
-        <h4>&#128260; Just in Case</h4>
-        <p>We always have a backup ready for you. <strong>If King of Thai has a wait:</strong> You could try <strong>Pho La Jolla</strong> at 3211 Holiday Ct. About a 10 min drive toward UTC. Great Vietnamese pho, open straight through, very affordable.</p>
-        <p style="margin-top:8px"><strong>If Bobboi is closed or packed:</strong> You could grab boba at <strong>Happy Lemon</strong> in Westfield UTC. About a 10 min drive. Or keep strolling Girard Ave and grab coffee instead.</p>
-        <p style="margin-top:8px"><strong>If Coast Walk feels short:</strong> You could add the <strong>Scripps Coastal Meander Trail</strong> near Birch Aquarium for more cliffside ocean views.</p>
+        <button class="swap-box-toggle" onclick="this.parentElement.classList.toggle('open')">
+          <div class="swap-box-title">&#128260; Just in Case</div>
+          <span class="swap-box-arrow">▼</span>
+        </button>
+        <div class="swap-box-content">
+          <p>We always have a backup ready for you. <strong>If King of Thai has a wait:</strong> You could try <strong>Pho La Jolla</strong> at 3211 Holiday Ct. About a 10 min drive toward UTC. Great Vietnamese pho, open straight through, very affordable.</p>
+          <p style="margin-top:8px"><strong>If Bobboi is closed or packed:</strong> You could grab boba at <strong>Happy Lemon</strong> in Westfield UTC. About a 10 min drive. Or keep strolling Girard Ave and grab coffee instead.</p>
+          <p style="margin-top:8px"><strong>If Coast Walk feels short:</strong> You could add the <strong>Scripps Coastal Meander Trail</strong> near Birch Aquarium for more cliffside ocean views.</p>
+        </div>
       </div>
 
       <!-- Budget -->

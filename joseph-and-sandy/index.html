@@ -443,10 +443,20 @@
     .food-rec-shared .food-rec-dishes{display:grid;grid-template-columns:1fr 1fr;gap:10px}
     @media(max-width:480px){.food-recs{grid-template-columns:1fr}.food-rec-shared .food-rec-dishes{grid-template-columns:1fr}}
 
-    /* ── Swap Box ── */
-    .swap-box{background:var(--cream);border:3px dashed var(--wing-pink);border-radius:14px;padding:14px 18px;margin:16px 0}
-    .swap-box-title{font-size:clamp(.72rem,1.1vw,.78rem);font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--cupid);margin-bottom:6px}
-    .swap-box p{font-size:clamp(.82rem,1.4vw,.88rem);color:var(--text-muted);line-height:1.6}
+    /* ── Swap Box (Dropdown) ── */
+    .swap-box{background:var(--cream);border:3px dashed var(--wing-pink);border-radius:14px;margin:16px 0;overflow:hidden}
+    .swap-box-toggle{
+      display:flex;align-items:center;justify-content:space-between;width:100%;
+      padding:14px 18px;cursor:pointer;border:none;background:transparent;
+      font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text",system-ui,sans-serif;
+      text-align:left;
+    }
+    .swap-box-title{font-size:clamp(.72rem,1.1vw,.78rem);font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--cupid);margin:0}
+    .swap-box-arrow{font-size:.7rem;color:var(--cupid);transition:transform .3s ease}
+    .swap-box.open .swap-box-arrow{transform:rotate(180deg)}
+    .swap-box-content{max-height:0;overflow:hidden;transition:max-height .3s ease;padding:0 18px}
+    .swap-box.open .swap-box-content{max-height:300px;padding:0 18px 14px}
+    .swap-box-content p{font-size:clamp(.82rem,1.4vw,.88rem);color:var(--text-muted);line-height:1.6}
     .swap-box a{color:var(--cupid);font-weight:600;text-decoration:none}
 
     /* ── Stop Feedback ── */
@@ -609,8 +619,6 @@
     <div class="cupid-icon">&#128152;</div>
     <div class="hero-brand">DateFlo</div>
     <h1>Joseph &amp; <span>Sandy</span></h1>
-    <p class="hero-sub">Two curated plans for <strong>Saturday, March 14, 2026</strong>.</p>
-    <p class="hero-note">Two cuisines, two vibes &mdash; pick the one that matches your mood on Saturday.</p>
 
     <div class="hero-buttons">
       <a class="hero-btn hero-btn-primary" href="#" onclick="showOption('A');return false;">🌶️ Plan A: Spice Road</a>
@@ -644,7 +652,6 @@
         <span class="card-cta">View This Date &rarr;</span>
       </div>
     </div>
-    <p class="arrow-hint">&darr; tap a card to see the full plan</p>
   </div>
 
   <!-- ══════════ PLAN A: SPICE ROAD ══════════ -->
@@ -700,8 +707,13 @@
           <p><strong>Free.</strong> Open sunrise to sunset. About 40&ndash;50 min at a comfortable pace.</p>
         </div>
         <div class="swap-box">
-          <div class="swap-box-title">Backup Walk</div>
-          <p>If the park is too crowded from the festival, <a href="https://www.google.com/maps/place/Kate+Sessions+Memorial+Park" target="_blank">Kate Sessions Park</a> in Pacific Beach has panoramic bay views and is 10 min from Convoy. No event conflicts.</p>
+          <button class="swap-box-toggle" onclick="this.parentElement.classList.toggle('open')">
+            <div class="swap-box-title">Backup Walk</div>
+            <span class="swap-box-arrow">▼</span>
+          </button>
+          <div class="swap-box-content">
+            <p>If the park is too crowded from the festival, <a href="https://www.google.com/maps/place/Kate+Sessions+Memorial+Park" target="_blank">Kate Sessions Park</a> in Pacific Beach has panoramic bay views and is 10 min from Convoy. No event conflicts.</p>
+          </div>
         </div>
         <div class="transit-tag"><i data-lucide="car" style="width:14px;height:14px"></i> ~15 min drive to Convoy</div>
         <div class="stop-fb" id="sfb-A1">
@@ -783,8 +795,13 @@
           </div>
         </div>
         <div class="swap-box">
-          <div class="swap-box-title">Backup Restaurant</div>
-          <p><a href="https://www.shanximagickitchen.com/" target="_blank">Shan Xi Magic Kitchen</a> (4344 Convoy St, 7 min walk) &mdash; authentic Shaanxi hand-pulled noodles and cumin lamb. More casual vibes but incredible food. No reservations needed. Opens for dinner at 4:30 PM.</p>
+          <button class="swap-box-toggle" onclick="this.parentElement.classList.toggle('open')">
+            <div class="swap-box-title">Backup Restaurant</div>
+            <span class="swap-box-arrow">▼</span>
+          </button>
+          <div class="swap-box-content">
+            <p><a href="https://www.shanximagickitchen.com/" target="_blank">Shan Xi Magic Kitchen</a> (4344 Convoy St, 7 min walk) &mdash; authentic Shaanxi hand-pulled noodles and cumin lamb. More casual vibes but incredible food. No reservations needed. Opens for dinner at 4:30 PM.</p>
+          </div>
         </div>
         <div class="transit-tag"><i data-lucide="footprints" style="width:14px;height:14px"></i> ~7 min walk to Yun Tea House</div>
         <div class="stop-fb" id="sfb-A2">
@@ -831,8 +848,13 @@
           <p><strong>Saturday hours:</strong> 11 AM &ndash; 11:45 PM. No rush.</p>
         </div>
         <div class="swap-box">
-          <div class="swap-box-title">Alternative</div>
-          <p><a href="https://www.google.com/maps/dir/?api=1&destination=Boba+Bar+and+Desserts+4619+Convoy+St+San+Diego" target="_blank">Boba Bar and Desserts</a> (2 min walk) &mdash; puffles, tanghulu, and creative boba drinks. 1,149 reviews. More Instagram-friendly.</p>
+          <button class="swap-box-toggle" onclick="this.parentElement.classList.toggle('open')">
+            <div class="swap-box-title">Alternative</div>
+            <span class="swap-box-arrow">▼</span>
+          </button>
+          <div class="swap-box-content">
+            <p><a href="https://www.google.com/maps/dir/?api=1&destination=Boba+Bar+and+Desserts+4619+Convoy+St+San+Diego" target="_blank">Boba Bar and Desserts</a> (2 min walk) &mdash; puffles, tanghulu, and creative boba drinks. 1,149 reviews. More Instagram-friendly.</p>
+          </div>
         </div>
         <div class="stop-fb" id="sfb-A3">
           <div class="stop-fb-label">How was this stop?</div>
@@ -1006,8 +1028,13 @@
           </div>
         </div>
         <div class="swap-box">
-          <div class="swap-box-title">Backup Restaurant</div>
-          <p><a href="https://www.opentable.com/r/piatti-la-jolla" target="_blank">Piatti La Jolla</a> (La Jolla Shores) &mdash; romantic courtyard with twinkling lights, housemade pasta, grilled ribeye. 4.7 stars on 5,350 OpenTable reviews. More affordable (~$30&ndash;40/pp). 10 min drive from the Cove area.</p>
+          <button class="swap-box-toggle" onclick="this.parentElement.classList.toggle('open')">
+            <div class="swap-box-title">Backup Restaurant</div>
+            <span class="swap-box-arrow">▼</span>
+          </button>
+          <div class="swap-box-content">
+            <p><a href="https://www.opentable.com/r/piatti-la-jolla" target="_blank">Piatti La Jolla</a> (La Jolla Shores) &mdash; romantic courtyard with twinkling lights, housemade pasta, grilled ribeye. 4.7 stars on 5,350 OpenTable reviews. More affordable (~$30&ndash;40/pp). 10 min drive from the Cove area.</p>
+          </div>
         </div>
         <div class="transit-tag"><i data-lucide="footprints" style="width:14px;height:14px"></i> Bobboi is downstairs in the same building</div>
         <div class="stop-fb" id="sfb-B2">
