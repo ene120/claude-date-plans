@@ -320,7 +320,7 @@
       display:flex;flex-direction:column;gap:6px;
       background:var(--cream);
       border:2px solid var(--wing-pink);border-radius:14px;
-      padding:10px;width:200px;z-index:2;
+      padding:10px;width:200px;max-width:200px;box-sizing:border-box;z-index:2;overflow:hidden;word-break:break-word;
       box-shadow:3px 3px 0px rgba(142,58,89,.08);
     }
     .tc-group{display:flex;flex-direction:column;gap:4px}
@@ -345,8 +345,8 @@
     .tc-paid:hover{box-shadow:3px 3px 0px #c8a020}
     .tc-none{background:#a08090;color:#fff;cursor:default;opacity:.75;font-size:.6rem;border-radius:20px}
     .tc-none:hover{transform:none;box-shadow:none}
-    .tc-park-stack{display:flex;flex-direction:column;gap:4px;width:100%}
-    .tc-park-label{font-size:.6rem;font-weight:700;color:var(--deep-rose);letter-spacing:.5px;padding:0 4px}
+    .tc-park-stack{display:flex;flex-direction:column;gap:4px;width:100%;min-width:0}
+    .tc-park-label{font-size:.6rem;font-weight:700;color:var(--deep-rose);letter-spacing:.5px;padding:0 4px;white-space:normal;word-break:break-word}
     .tc-park-row{display:flex;gap:4px}
     .tc-park-row .tc-btn{flex:1;text-align:center;border-radius:20px;padding:6px 10px;display:flex;align-items:center;justify-content:center}
     .tc-park-row .tc-btn-apple{flex:1;background:var(--text-dark);color:#fff;box-shadow:2px 2px 0px #1a0a18;border-radius:20px;padding:6px 10px;text-align:center;text-decoration:none;cursor:pointer;display:flex;align-items:center;justify-content:center}
