@@ -345,10 +345,11 @@
     .tc-paid:hover{box-shadow:3px 3px 0px #c8a020}
     .tc-none{background:#a08090;color:#fff;cursor:default;opacity:.75;font-size:.6rem;border-radius:20px}
     .tc-none:hover{transform:none;box-shadow:none}
-    .tc-park-pair{display:flex;gap:0;align-items:stretch}
-    .tc-park-pair .tc-btn:first-child{border-radius:20px 0 0 20px;padding-right:10px}
-    .tc-park-pair .tc-apple{background:var(--text-dark);color:#fff;box-shadow:2px 2px 0px #1a0a18;border-radius:0 20px 20px 0;padding:6px 14px;font-size:.75rem;display:flex;align-items:center;text-decoration:none;cursor:pointer}
-    .tc-park-pair .tc-apple:hover{opacity:.85}
+    .tc-park-stack{display:flex;flex-direction:column;gap:4px;width:100%}
+    .tc-park-row{display:flex;gap:4px}
+    .tc-park-row .tc-btn{flex:1;text-align:center;border-radius:20px;padding:6px 10px}
+    .tc-park-row .tc-btn-apple{flex:1;background:var(--text-dark);color:#fff;box-shadow:2px 2px 0px #1a0a18;border-radius:20px;padding:6px 10px;font-size:.65rem;text-align:center;text-decoration:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:4px}
+    .tc-park-row .tc-btn-apple:hover{transform:translateY(-1px);box-shadow:3px 3px 0px #1a0a18}
     @media(max-width:420px){
       .transport-corner{position:relative;top:auto;right:auto;margin-bottom:14px;flex-direction:row;flex-wrap:wrap;gap:8px;align-items:flex-start}
       .tc-group+.tc-group{border-top:none;padding-top:0;border-left:2px solid var(--wing-pink);padding-left:8px}
@@ -689,7 +690,7 @@
         <div class="stop-number">1</div>
         <div class="transport-corner">
           <div class="tc-group"><div class="tc-label">Rides</div><div class="tc-btns"><a href="https://m.uber.com/ul/?action=setPickup&dropoff[latitude]=32.7477&dropoff[longitude]=-117.2494&dropoff[nickname]=OB+Noodle+House" target="_blank" class="tc-btn tc-uber">Uber</a><a href="https://lyft.com/ride?id=lyft&destination[latitude]=32.7477&destination[longitude]=-117.2494" target="_blank" class="tc-btn tc-lyft">Lyft</a></div></div>
-          <div class="tc-group"><div class="tc-label">Parking</div><div class="tc-btns"><span class="tc-park-pair"><a href="https://www.google.com/maps/dir/?api=1&destination=32.7492,-117.2526" target="_blank" class="tc-btn tc-free">Free: OB Pier Lot</a><a href="https://maps.apple.com/?daddr=32.7492,-117.2526&dirflg=d" target="_blank" class="tc-btn tc-apple">&#63743;</a></span><span class="tc-park-pair"><a href="https://www.google.com/maps/dir/?api=1&destination=32.7486,-117.2502" target="_blank" class="tc-btn tc-paid">Paid: Newport Lot</a><a href="https://maps.apple.com/?daddr=32.7486,-117.2502&dirflg=d" target="_blank" class="tc-btn tc-apple">&#63743;</a></span></div></div>
+          <div class="tc-group"><div class="tc-label">Parking</div><div class="tc-park-stack"><div class="tc-park-row"><a href="https://www.google.com/maps/dir/?api=1&destination=32.7492,-117.2526" target="_blank" class="tc-btn tc-free">Free: OB Pier Lot</a><a href="https://maps.apple.com/?daddr=32.7492,-117.2526&dirflg=d" target="_blank" class="tc-btn-apple">Apple Maps</a></div><div class="tc-park-row"><a href="https://www.google.com/maps/dir/?api=1&destination=32.7486,-117.2502" target="_blank" class="tc-btn tc-paid">Paid: Newport Lot</a><a href="https://maps.apple.com/?daddr=32.7486,-117.2502&dirflg=d" target="_blank" class="tc-btn-apple">Apple Maps</a></div></div></div>
         </div>
         <div class="stop-header">
           <h3 class="stop-title">Late Lunch at OB Noodle House</h3>
@@ -779,7 +780,7 @@
       <div class="stop">
         <div class="stop-number">2</div>
         <div class="transport-corner">
-          <div class="tc-group"><div class="tc-label">Parking</div><div class="tc-btns"><span class="tc-park-pair"><a href="https://www.google.com/maps/dir/?api=1&destination=32.7478,-117.2494" target="_blank" class="tc-btn tc-free">Free: Cape May St</a><a href="https://maps.apple.com/?daddr=32.7478,-117.2494&dirflg=d" target="_blank" class="tc-btn tc-apple">&#63743;</a></span><span class="tc-park-pair"><a href="https://www.google.com/maps/dir/?api=1&destination=32.7475,-117.2510" target="_blank" class="tc-btn tc-paid">Paid: Bacon/SM Lot</a><a href="https://maps.apple.com/?daddr=32.7475,-117.2510&dirflg=d" target="_blank" class="tc-btn tc-apple">&#63743;</a></span></div></div>
+          <div class="tc-group"><div class="tc-label">Parking</div><div class="tc-park-stack"><div class="tc-park-row"><a href="https://www.google.com/maps/dir/?api=1&destination=32.7478,-117.2494" target="_blank" class="tc-btn tc-free">Free: Cape May St</a><a href="https://maps.apple.com/?daddr=32.7478,-117.2494&dirflg=d" target="_blank" class="tc-btn-apple">Apple Maps</a></div><div class="tc-park-row"><a href="https://www.google.com/maps/dir/?api=1&destination=32.7475,-117.2510" target="_blank" class="tc-btn tc-paid">Paid: Bacon/SM Lot</a><a href="https://maps.apple.com/?daddr=32.7475,-117.2510&dirflg=d" target="_blank" class="tc-btn-apple">Apple Maps</a></div></div></div>
         </div>
         <div class="stop-header">
           <h3 class="stop-title">Gelato at An&rsquo;s Dry Cleaning</h3>
@@ -883,7 +884,7 @@
       <div class="stop">
         <div class="stop-number">4</div>
         <div class="transport-corner">
-          <div class="tc-group"><div class="tc-label">Parking</div><div class="tc-btns"><span class="tc-park-pair"><a href="https://www.google.com/maps/dir/?api=1&destination=32.7190,-117.2563" target="_blank" class="tc-btn tc-free">Free: Ladera Dirt Lot</a><a href="https://maps.apple.com/?daddr=32.7190,-117.2563&dirflg=d" target="_blank" class="tc-btn tc-apple">&#63743;</a></span><span class="tc-park-pair"><a href="https://www.google.com/maps/dir/?api=1&destination=32.7196,-117.2555" target="_blank" class="tc-btn tc-free">Free: Sunset Cliffs Blvd</a><a href="https://maps.apple.com/?daddr=32.7196,-117.2555&dirflg=d" target="_blank" class="tc-btn tc-apple">&#63743;</a></span></div></div>
+          <div class="tc-group"><div class="tc-label">Parking</div><div class="tc-park-stack"><div class="tc-park-row"><a href="https://www.google.com/maps/dir/?api=1&destination=32.7190,-117.2563" target="_blank" class="tc-btn tc-free">Free: Ladera Dirt Lot</a><a href="https://maps.apple.com/?daddr=32.7190,-117.2563&dirflg=d" target="_blank" class="tc-btn-apple">Apple Maps</a></div><div class="tc-park-row"><a href="https://www.google.com/maps/dir/?api=1&destination=32.7196,-117.2555" target="_blank" class="tc-btn tc-free">Free: Sunset Cliffs Blvd</a><a href="https://maps.apple.com/?daddr=32.7196,-117.2555&dirflg=d" target="_blank" class="tc-btn-apple">Apple Maps</a></div></div></div>
         </div>
         <div class="stop-header">
           <h3 class="stop-title">Sunset at Sunset Cliffs</h3>
@@ -1007,7 +1008,7 @@
         <div class="stop-number" style="background:linear-gradient(135deg,#5b86e5,#36d1dc)">1</div>
         <div class="transport-corner">
           <div class="tc-group"><div class="tc-label">Rides</div><div class="tc-btns"><a href="https://m.uber.com/ul/?action=setPickup&dropoff[latitude]=32.8491&dropoff[longitude]=-117.2715&dropoff[nickname]=Coast+Walk+Trail" target="_blank" class="tc-btn tc-uber">Uber</a><a href="https://lyft.com/ride?id=lyft&destination[latitude]=32.8491&destination[longitude]=-117.2715" target="_blank" class="tc-btn tc-lyft">Lyft</a></div></div>
-          <div class="tc-group"><div class="tc-label">Parking</div><div class="tc-btns"><span class="tc-park-pair"><a href="https://www.google.com/maps/dir/?api=1&destination=32.8440,-117.2795" target="_blank" class="tc-btn tc-free">Free: Coast Blvd S</a><a href="https://maps.apple.com/?daddr=32.8440,-117.2795&dirflg=d" target="_blank" class="tc-btn tc-apple">&#63743;</a></span><span class="tc-park-pair"><a href="https://www.google.com/maps/dir/?api=1&destination=32.8503,-117.2727" target="_blank" class="tc-btn tc-paid">Paid: Coast Walk Garage</a><a href="https://maps.apple.com/?daddr=32.8503,-117.2727&dirflg=d" target="_blank" class="tc-btn tc-apple">&#63743;</a></span></div></div>
+          <div class="tc-group"><div class="tc-label">Parking</div><div class="tc-park-stack"><div class="tc-park-row"><a href="https://www.google.com/maps/dir/?api=1&destination=32.8440,-117.2795" target="_blank" class="tc-btn tc-free">Free: Coast Blvd S</a><a href="https://maps.apple.com/?daddr=32.8440,-117.2795&dirflg=d" target="_blank" class="tc-btn-apple">Apple Maps</a></div><div class="tc-park-row"><a href="https://www.google.com/maps/dir/?api=1&destination=32.8503,-117.2727" target="_blank" class="tc-btn tc-paid">Paid: Coast Walk Garage</a><a href="https://maps.apple.com/?daddr=32.8503,-117.2727&dirflg=d" target="_blank" class="tc-btn-apple">Apple Maps</a></div></div></div>
         </div>
         <div class="stop-header">
           <h3 class="stop-title">Coast Walk Trail &amp; Seal Watching</h3>
@@ -1038,7 +1039,7 @@
       <div class="stop">
         <div class="stop-number" style="background:linear-gradient(135deg,#5b86e5,#36d1dc)">2</div>
         <div class="transport-corner">
-          <div class="tc-group"><div class="tc-label">Parking</div><div class="tc-btns"><span class="tc-park-pair"><a href="https://www.google.com/maps/dir/?api=1&destination=32.8440,-117.2795" target="_blank" class="tc-btn tc-free">Free: Coast Blvd S</a><a href="https://maps.apple.com/?daddr=32.8440,-117.2795&dirflg=d" target="_blank" class="tc-btn tc-apple">&#63743;</a></span><span class="tc-park-pair"><a href="https://www.google.com/maps/dir/?api=1&destination=32.8503,-117.2727" target="_blank" class="tc-btn tc-paid">Paid: Coast Walk Garage</a><a href="https://maps.apple.com/?daddr=32.8503,-117.2727&dirflg=d" target="_blank" class="tc-btn tc-apple">&#63743;</a></span></div></div>
+          <div class="tc-group"><div class="tc-label">Parking</div><div class="tc-park-stack"><div class="tc-park-row"><a href="https://www.google.com/maps/dir/?api=1&destination=32.8440,-117.2795" target="_blank" class="tc-btn tc-free">Free: Coast Blvd S</a><a href="https://maps.apple.com/?daddr=32.8440,-117.2795&dirflg=d" target="_blank" class="tc-btn-apple">Apple Maps</a></div><div class="tc-park-row"><a href="https://www.google.com/maps/dir/?api=1&destination=32.8503,-117.2727" target="_blank" class="tc-btn tc-paid">Paid: Coast Walk Garage</a><a href="https://maps.apple.com/?daddr=32.8503,-117.2727&dirflg=d" target="_blank" class="tc-btn-apple">Apple Maps</a></div></div></div>
         </div>
         <div class="stop-header">
           <h3 class="stop-title">Late Lunch at King of Thai Cuisine</h3>

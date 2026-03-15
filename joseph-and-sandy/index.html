@@ -348,10 +348,11 @@
     .tc-paid:hover{box-shadow:3px 3px 0px #c8a020}
     .tc-none{background:#a08090;color:#fff;cursor:default;opacity:.75;font-size:.6rem;border-radius:20px}
     .tc-none:hover{transform:none;box-shadow:none}
-    .tc-park-pair{display:flex;gap:0;align-items:stretch}
-    .tc-park-pair .tc-btn:first-child{border-radius:20px 0 0 20px;padding-right:10px}
-    .tc-park-pair .tc-apple{background:var(--text-dark);color:#fff;box-shadow:2px 2px 0px #1a0a18;border-radius:0 20px 20px 0;padding:6px 14px;font-size:.75rem;display:flex;align-items:center;text-decoration:none;cursor:pointer}
-    .tc-park-pair .tc-apple:hover{opacity:.85}
+    .tc-park-stack{display:flex;flex-direction:column;gap:4px;width:100%}
+    .tc-park-row{display:flex;gap:4px}
+    .tc-park-row .tc-btn{flex:1;text-align:center;border-radius:20px;padding:6px 10px}
+    .tc-park-row .tc-btn-apple{flex:1;background:var(--text-dark);color:#fff;box-shadow:2px 2px 0px #1a0a18;border-radius:20px;padding:6px 10px;font-size:.65rem;text-align:center;text-decoration:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:4px}
+    .tc-park-row .tc-btn-apple:hover{transform:translateY(-1px);box-shadow:3px 3px 0px #1a0a18}
     @media(max-width:420px){
       .transport-corner{position:relative;top:auto;right:auto;margin-bottom:14px;flex-direction:row;flex-wrap:wrap;gap:8px;align-items:flex-start}
       .tc-group+.tc-group{border-top:none;padding-top:0;border-left:2px solid var(--wing-pink);padding-left:8px}
@@ -716,9 +717,9 @@
             <a href="https://m.uber.com/ul/?action=setPickup&dropoff[latitude]=32.7311&dropoff[longitude]=-117.1495&dropoff[nickname]=Balboa%20Park%20Botanical%20Building" target="_blank" class="tc-btn tc-uber">Uber</a>
             <a href="https://lyft.com/ride?id=lyft&destination[latitude]=32.7311&destination[longitude]=-117.1495" target="_blank" class="tc-btn tc-lyft">Lyft</a>
           </div></div>
-          <div class="tc-group"><div class="tc-label">Parking</div><div class="tc-btns">
-            <span class="tc-park-pair"><a href="https://www.google.com/maps/dir/?api=1&destination=32.7302,-117.1468" target="_blank" class="tc-btn tc-free">Free: Inspiration Pt</a><a href="https://maps.apple.com/?daddr=32.7302,-117.1468&dirflg=d" target="_blank" class="tc-btn tc-apple">&#63743;</a></span>
-            <span class="tc-park-pair"><a href="https://www.google.com/maps/dir/?api=1&destination=32.7284,-117.1512" target="_blank" class="tc-btn tc-paid">Organ Pavilion $10</a><a href="https://maps.apple.com/?daddr=32.7284,-117.1512&dirflg=d" target="_blank" class="tc-btn tc-apple">&#63743;</a></span>
+          <div class="tc-group"><div class="tc-label">Parking</div><div class="tc-park-stack">
+            <div class="tc-park-row"><a href="https://www.google.com/maps/dir/?api=1&destination=32.7302,-117.1468" target="_blank" class="tc-btn tc-free">Free: Inspiration Pt</a><a href="https://maps.apple.com/?daddr=32.7302,-117.1468&dirflg=d" target="_blank" class="tc-btn-apple">Apple Maps</a></div>
+            <div class="tc-park-row"><a href="https://www.google.com/maps/dir/?api=1&destination=32.7284,-117.1512" target="_blank" class="tc-btn tc-paid">Organ Pavilion $10</a><a href="https://maps.apple.com/?daddr=32.7284,-117.1512&dirflg=d" target="_blank" class="tc-btn-apple">Apple Maps</a></div>
           </div></div>
           <div class="tc-headsup" onclick="this.classList.toggle('open');this.closest('.stop').querySelector('.event-note').classList.toggle('open')">&#9888;&#65039; Heads Up <span class="arrow">&#9660;</span></div>
         </div>
@@ -790,9 +791,9 @@
             <a href="https://m.uber.com/ul/?action=setPickup&dropoff[latitude]=32.8198&dropoff[longitude]=-117.1538&dropoff[nickname]=Steamy%20Piggy" target="_blank" class="tc-btn tc-uber">Uber</a>
             <a href="https://lyft.com/ride?id=lyft&destination[latitude]=32.8198&destination[longitude]=-117.1538" target="_blank" class="tc-btn tc-lyft">Lyft</a>
           </div></div>
-          <div class="tc-group"><div class="tc-label">Parking</div><div class="tc-btns">
-            <span class="tc-park-pair"><a href="https://www.google.com/maps/dir/?api=1&destination=32.8177,-117.1539" target="_blank" class="tc-btn tc-free">Free: Plaza Lot</a><a href="https://maps.apple.com/?daddr=32.8177,-117.1539&dirflg=d" target="_blank" class="tc-btn tc-apple">&#63743;</a></span>
-            <span class="tc-park-pair"><a href="https://www.google.com/maps/dir/?api=1&destination=32.8215,-117.1540" target="_blank" class="tc-btn tc-paid">Paid: Diamond Lot</a><a href="https://maps.apple.com/?daddr=32.8215,-117.1540&dirflg=d" target="_blank" class="tc-btn tc-apple">&#63743;</a></span>
+          <div class="tc-group"><div class="tc-label">Parking</div><div class="tc-park-stack">
+            <div class="tc-park-row"><a href="https://www.google.com/maps/dir/?api=1&destination=32.8177,-117.1539" target="_blank" class="tc-btn tc-free">Free: Plaza Lot</a><a href="https://maps.apple.com/?daddr=32.8177,-117.1539&dirflg=d" target="_blank" class="tc-btn-apple">Apple Maps</a></div>
+            <div class="tc-park-row"><a href="https://www.google.com/maps/dir/?api=1&destination=32.8215,-117.1540" target="_blank" class="tc-btn tc-paid">Paid: Diamond Lot</a><a href="https://maps.apple.com/?daddr=32.8215,-117.1540&dirflg=d" target="_blank" class="tc-btn-apple">Apple Maps</a></div>
           </div></div>
         </div>
         <div class="stop-header">
@@ -890,9 +891,9 @@
       <div class="stop">
         <div class="stop-number">3</div>
         <div class="transport-corner">
-          <div class="tc-group"><div class="tc-label">Parking</div><div class="tc-btns">
-            <span class="tc-park-pair"><a href="https://www.google.com/maps/dir/?api=1&destination=32.8192,-117.1557" target="_blank" class="tc-btn tc-free">Free: Village Lot</a><a href="https://maps.apple.com/?daddr=32.8192,-117.1557&dirflg=d" target="_blank" class="tc-btn tc-apple">&#63743;</a></span>
-            <span class="tc-park-pair"><a href="https://www.google.com/maps/dir/?api=1&destination=32.8215,-117.1540" target="_blank" class="tc-btn tc-paid">Paid: Diamond Lot</a><a href="https://maps.apple.com/?daddr=32.8215,-117.1540&dirflg=d" target="_blank" class="tc-btn tc-apple">&#63743;</a></span>
+          <div class="tc-group"><div class="tc-label">Parking</div><div class="tc-park-stack">
+            <div class="tc-park-row"><a href="https://www.google.com/maps/dir/?api=1&destination=32.8192,-117.1557" target="_blank" class="tc-btn tc-free">Free: Village Lot</a><a href="https://maps.apple.com/?daddr=32.8192,-117.1557&dirflg=d" target="_blank" class="tc-btn-apple">Apple Maps</a></div>
+            <div class="tc-park-row"><a href="https://www.google.com/maps/dir/?api=1&destination=32.8215,-117.1540" target="_blank" class="tc-btn tc-paid">Paid: Diamond Lot</a><a href="https://maps.apple.com/?daddr=32.8215,-117.1540&dirflg=d" target="_blank" class="tc-btn-apple">Apple Maps</a></div>
           </div></div>
         </div>
         <div class="stop-header">
@@ -1034,9 +1035,9 @@
             <a href="https://m.uber.com/ul/?action=setPickup&dropoff[latitude]=32.8503&dropoff[longitude]=-117.2700&dropoff[nickname]=La%20Jolla%20Cove" target="_blank" class="tc-btn tc-uber">Uber</a>
             <a href="https://lyft.com/ride?id=lyft&destination[latitude]=32.8503&destination[longitude]=-117.2700" target="_blank" class="tc-btn tc-lyft">Lyft</a>
           </div></div>
-          <div class="tc-group"><div class="tc-label">Parking</div><div class="tc-btns">
-            <span class="tc-park-pair"><a href="https://www.google.com/maps/dir/?api=1&destination=32.8497,-117.2731" target="_blank" class="tc-btn tc-free">Free: Coast Blvd</a><a href="https://maps.apple.com/?daddr=32.8497,-117.2731&dirflg=d" target="_blank" class="tc-btn tc-apple">&#63743;</a></span>
-            <span class="tc-park-pair"><a href="https://www.google.com/maps/dir/?api=1&destination=32.8486,-117.2705" target="_blank" class="tc-btn tc-paid">Paid: Coast Walk Garage</a><a href="https://maps.apple.com/?daddr=32.8486,-117.2705&dirflg=d" target="_blank" class="tc-btn tc-apple">&#63743;</a></span>
+          <div class="tc-group"><div class="tc-label">Parking</div><div class="tc-park-stack">
+            <div class="tc-park-row"><a href="https://www.google.com/maps/dir/?api=1&destination=32.8497,-117.2731" target="_blank" class="tc-btn tc-free">Free: Coast Blvd</a><a href="https://maps.apple.com/?daddr=32.8497,-117.2731&dirflg=d" target="_blank" class="tc-btn-apple">Apple Maps</a></div>
+            <div class="tc-park-row"><a href="https://www.google.com/maps/dir/?api=1&destination=32.8486,-117.2705" target="_blank" class="tc-btn tc-paid">Paid: Coast Walk Garage</a><a href="https://maps.apple.com/?daddr=32.8486,-117.2705&dirflg=d" target="_blank" class="tc-btn-apple">Apple Maps</a></div>
           </div></div>
         </div>
         <div class="stop-header">
@@ -1094,9 +1095,9 @@
       <div class="stop">
         <div class="stop-number" style="background:linear-gradient(135deg,#5b86e5,#36d1dc)">2</div>
         <div class="transport-corner">
-          <div class="tc-group"><div class="tc-label">Parking</div><div class="tc-btns">
-            <span class="tc-park-pair"><a href="https://www.google.com/maps/dir/?api=1&destination=32.8497,-117.2731" target="_blank" class="tc-btn tc-free">Keep Spot</a><a href="https://maps.apple.com/?daddr=32.8497,-117.2731&dirflg=d" target="_blank" class="tc-btn tc-apple">&#63743;</a></span>
-            <span class="tc-park-pair"><a href="https://www.google.com/maps/dir/?api=1&destination=32.8488,-117.2733" target="_blank" class="tc-btn tc-paid">875 Prospect Garage</a><a href="https://maps.apple.com/?daddr=32.8488,-117.2733&dirflg=d" target="_blank" class="tc-btn tc-apple">&#63743;</a></span>
+          <div class="tc-group"><div class="tc-label">Parking</div><div class="tc-park-stack">
+            <div class="tc-park-row"><a href="https://www.google.com/maps/dir/?api=1&destination=32.8497,-117.2731" target="_blank" class="tc-btn tc-free">Keep Spot</a><a href="https://maps.apple.com/?daddr=32.8497,-117.2731&dirflg=d" target="_blank" class="tc-btn-apple">Apple Maps</a></div>
+            <div class="tc-park-row"><a href="https://www.google.com/maps/dir/?api=1&destination=32.8488,-117.2733" target="_blank" class="tc-btn tc-paid">875 Prospect Garage</a><a href="https://maps.apple.com/?daddr=32.8488,-117.2733&dirflg=d" target="_blank" class="tc-btn-apple">Apple Maps</a></div>
           </div></div>
         </div>
         <div class="stop-header">

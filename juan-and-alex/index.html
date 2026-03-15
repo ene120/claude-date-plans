@@ -324,10 +324,11 @@
     .tc-paid:hover{box-shadow:3px 3px 0px #c8a020}
     .tc-none{background:#a08090;color:#fff;cursor:default;opacity:.75;font-size:.6rem;border-radius:20px}
     .tc-none:hover{transform:none;box-shadow:none}
-    .tc-park-pair{display:flex;gap:0;align-items:stretch}
-    .tc-park-pair .tc-btn:first-child{border-radius:20px 0 0 20px;padding-right:10px}
-    .tc-park-pair .tc-apple{background:var(--text-dark);color:#fff;box-shadow:2px 2px 0px #1a0a18;border-radius:0 20px 20px 0;padding:6px 14px;font-size:.75rem;display:flex;align-items:center;text-decoration:none;cursor:pointer}
-    .tc-park-pair .tc-apple:hover{opacity:.85}
+    .tc-park-stack{display:flex;flex-direction:column;gap:4px;width:100%}
+    .tc-park-row{display:flex;gap:4px}
+    .tc-park-row .tc-btn{flex:1;text-align:center;border-radius:20px;padding:6px 10px}
+    .tc-park-row .tc-btn-apple{flex:1;background:var(--text-dark);color:#fff;box-shadow:2px 2px 0px #1a0a18;border-radius:20px;padding:6px 10px;font-size:.65rem;text-align:center;text-decoration:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:4px}
+    .tc-park-row .tc-btn-apple:hover{transform:translateY(-1px);box-shadow:3px 3px 0px #1a0a18}
     @media(max-width:420px){
       .transport-corner{position:relative;top:auto;right:auto;margin-bottom:14px;flex-direction:row;flex-wrap:wrap;gap:8px;align-items:flex-start}
       .tc-group+.tc-group{border-top:none;padding-top:0;border-left:2px solid var(--wing-pink);padding-left:8px}
