@@ -891,8 +891,11 @@
         <p class="fp-sub">These are optional, but they help us make your plan truly personal.</p>
         <div class="form-group">
           <label>Love languages (if you know them)</label>
-          <input type="text" class="form-input" id="loveLangs" placeholder="e.g. Quality Time, Physical Touch, Words of Affirmation...">
-          <div class="form-hint">Not sure? No worries, skip this one.</div>
+          <div class="form-hint" style="margin-top:0;margin-bottom:12px">Not sure? No worries, skip this one.</div>
+          <label style="font-size:.9rem;color:var(--text-soft)"><span class="ll1Name">Partner 1</span></label>
+          <input type="text" class="form-input" id="loveLangs1" placeholder="e.g. Quality Time, Physical Touch, Words of Affirmation..." style="margin-bottom:12px">
+          <label style="font-size:.9rem;color:var(--text-soft)"><span class="ll2Name">Partner 2</span></label>
+          <input type="text" class="form-input" id="loveLangs2" placeholder="e.g. Acts of Service, Gifts, Quality Time...">
         </div>
         <div class="form-group">
           <label>Any specific restaurants or spots you want included?</label>
@@ -1014,6 +1017,8 @@
         // Update partner tab labels
         document.getElementById('pt1Label').textContent=document.getElementById('name1').value;
         document.getElementById('pt2Label').textContent=document.getElementById('name2').value;
+        document.querySelectorAll('.ll1Name').forEach(function(el){el.textContent=document.getElementById('name1').value});
+        document.querySelectorAll('.ll2Name').forEach(function(el){el.textContent=document.getElementById('name2').value});
       }
       if(from===2){
         var stageSelected=document.querySelector('#stageChoices .choice.selected');
@@ -1081,7 +1086,8 @@
         food2Allergies: getVal('food2Allergies'),
         vibes: getMulti('vibeChoices'),
         dealbreakers: getVal('dealbreakers'),
-        loveLangs: getVal('loveLangs'),
+        loveLangs1: getVal('loveLangs1'),
+        loveLangs2: getVal('loveLangs2'),
         specificSpots: getVal('specificSpots'),
         surprise: getChoice('surpriseChoices'),
         accessibility: getVal('accessibility'),
