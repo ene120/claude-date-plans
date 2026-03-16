@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DateFlo | Favorites</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/plan-viewer.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <aside class="sidebar" id="sidebar"></aside>
+
+  <main class="main-content">
+    <div class="page-header">
+      <h1 class="page-title">Favorites</h1>
+      <p class="page-sub">Your saved venues and spots from date plans.</p>
+    </div>
+
+    <div class="fav-grid" id="favGrid">
+      <!-- Favorite cards injected here -->
+    </div>
+
+    <div id="emptyFavs" class="empty-state hidden">
+      <div class="empty-icon">⭐</div>
+      <h3>No favorites yet</h3>
+      <p>Save venues from your date plans or add your own favorite spots.</p>
+      <button class="btn-primary" id="addFavBtn">Add a Venue</button>
+    </div>
+  </main>
+
+  <!-- Add Venue Floating Button -->
+  <div style="position:fixed;bottom:24px;right:24px;z-index:20" id="fabWrap">
+    <button class="plan-fab" id="openAddModal">&#43; Add Venue</button>
+  </div>
+
+  <!-- Add/Edit Venue Modal -->
+  <div class="modal-overlay" id="favModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 id="favModalTitle">Add a Venue</h3>
+        <button class="modal-close" id="closeFavModal">&times;</button>
+      </div>
+      <div class="form-group">
+        <label>Venue Name <span class="req">*</span></label>
+        <input type="text" class="form-input" id="favName" placeholder="e.g. The Italian Place">
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Type</label>
+          <select class="form-input" id="favType">
+            <option value="restaurant">Restaurant</option>
+            <option value="bar">Bar</option>
+            <option value="activity">Activity</option>
+            <option value="park">Park</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>City</label>
+          <input type="text" class="form-input" id="favCity" placeholder="Los Angeles">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Address</label>
+        <input type="text" class="form-input" id="favAddress" placeholder="123 Main St">
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Google Maps URL</label>
+          <input type="url" class="form-input" id="favGoogleUrl" placeholder="https://maps.google.com/...">
+        </div>
+        <div class="form-group">
+          <label>Apple Maps URL</label>
+          <input type="url" class="form-input" id="favAppleUrl" placeholder="https://maps.apple.com/...">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Notes</label>
+        <textarea class="form-input" id="favNotes" placeholder="Great ambiance, try the pasta..."></textarea>
+      </div>
+      <div class="modal-actions">
+        <button class="btn-ghost btn-small" id="cancelFavBtn">Cancel</button>
+        <button class="btn-primary btn-small" id="saveFavBtn">Save Venue</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="mobile-tabs" id="mobileTabs"></div>
+
+  <script type="module" src="js/favorites.js"></script>
+</body>
+</html>

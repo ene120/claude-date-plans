@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DateFlo | Request a Plan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <aside class="sidebar" id="sidebar"></aside>
+
+  <main class="main-content">
+    <div style="max-width:600px;margin:0 auto">
+      <div class="form-progress-bar">
+        <div class="form-progress-fill" id="progressFill" style="width:25%"></div>
+      </div>
+
+      <!-- Page 1: Occasion & Date -->
+      <div class="form-page active" id="page1">
+        <div class="fp-icon">🎉</div>
+        <div class="fp-title">What's the Occasion?</div>
+        <p class="fp-sub">Tell us what you're celebrating (or not celebrating, every date matters).</p>
+
+        <div class="form-group">
+          <label>Occasion</label>
+          <select class="form-input" id="reqOccasion">
+            <option value="">Select...</option>
+            <option value="date_night">Date Night</option>
+            <option value="anniversary">Anniversary</option>
+            <option value="birthday">Birthday</option>
+            <option value="valentines">Valentine's Day</option>
+            <option value="just_because">Just Because</option>
+            <option value="first_date">First Date</option>
+            <option value="proposal">Proposal</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Date <span class="req">*</span></label>
+            <input type="date" class="form-input" id="reqDate">
+          </div>
+          <div class="form-group">
+            <label>Start Time <span class="req">*</span></label>
+            <input type="time" class="form-input" id="reqTime">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>City <span class="req">*</span></label>
+          <input type="text" class="form-input" id="reqCity" placeholder="e.g. Los Angeles, CA">
+          <div class="form-hint">Pre filled from your preferences. Change if this date is elsewhere.</div>
+        </div>
+
+        <div class="form-nav">
+          <span></span>
+          <button class="btn-next" onclick="nextPage(2)">Continue &rarr;</button>
+        </div>
+      </div>
+
+      <!-- Page 2: Budget & Activity -->
+      <div class="form-page" id="page2">
+        <div class="fp-icon">💰</div>
+        <div class="fp-title">Budget &amp; Energy</div>
+        <p class="fp-sub">How much do you want to spend (on your own), and how active should the date be?</p>
+
+        <div class="form-group">
+          <label>Budget</label>
+          <div class="choices" id="budgetChoices">
+            <div class="choice" data-value="free" onclick="selectChoice(this,'budget')">
+              <div class="choice-icon">🆓</div>
+              <div class="choice-label">Free</div>
+            </div>
+            <div class="choice" data-value="low" onclick="selectChoice(this,'budget')">
+              <div class="choice-icon">💵</div>
+              <div class="choice-label">$1 to $50</div>
+            </div>
+            <div class="choice" data-value="mid" onclick="selectChoice(this,'budget')">
+              <div class="choice-icon">💰</div>
+              <div class="choice-label">$50 to $150</div>
+            </div>
+            <div class="choice" data-value="high" onclick="selectChoice(this,'budget')">
+              <div class="choice-icon">💎</div>
+              <div class="choice-label">$150 to $300</div>
+            </div>
+            <div class="choice" data-value="luxury" onclick="selectChoice(this,'budget')">
+              <div class="choice-icon">👑</div>
+              <div class="choice-label">$300+</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Activity Level</label>
+          <div class="choices" id="activityChoices">
+            <div class="choice" data-value="chill" onclick="selectChoice(this,'activity')">
+              <div class="choice-icon">😌</div>
+              <div class="choice-label">Chill</div>
+              <div class="choice-desc">Low key, relaxed</div>
+            </div>
+            <div class="choice" data-value="moderate" onclick="selectChoice(this,'activity')">
+              <div class="choice-icon">🚶</div>
+              <div class="choice-label">Moderate</div>
+              <div class="choice-desc">Mix of both</div>
+            </div>
+            <div class="choice" data-value="active" onclick="selectChoice(this,'activity')">
+              <div class="choice-icon">🏃</div>
+              <div class="choice-label">Active</div>
+              <div class="choice-desc">Adventurous, on the go</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-nav">
+          <button class="btn-back" onclick="prevPage(1)">&larr; Back</button>
+          <button class="btn-next" onclick="nextPage(3)">Continue &rarr;</button>
+        </div>
+      </div>
+
+      <!-- Page 3: Special Requests -->
+      <div class="form-page" id="page3">
+        <div class="fp-icon">✨</div>
+        <div class="fp-title">Special Requests</div>
+        <p class="fp-sub">Any specific spots you want included, or anything our team should know?</p>
+
+        <div class="form-group">
+          <label>Specific Venues or Spots (optional)</label>
+          <textarea class="form-input" id="reqSpots" placeholder="e.g. We love rooftop bars, or include the Getty Center..."></textarea>
+        </div>
+        <div class="form-group">
+          <label>Anything Else?</label>
+          <textarea class="form-input" id="reqNotes" placeholder="Surprise elements, dietary needs for this specific date, etc."></textarea>
+        </div>
+
+        <div class="form-nav">
+          <button class="btn-back" onclick="prevPage(2)">&larr; Back</button>
+          <button class="btn-next" onclick="nextPage(4)">Review &rarr;</button>
+        </div>
+      </div>
+
+      <!-- Page 4: Review & Submit -->
+      <div class="form-page" id="page4">
+        <div class="fp-icon">📋</div>
+        <div class="fp-title">Review Your Request</div>
+        <p class="fp-sub">Make sure everything looks good before submitting.</p>
+
+        <div class="glass-card" id="reviewSummary" style="margin-bottom:24px">
+          <!-- Filled by JS -->
+        </div>
+
+        <p style="font-size:.82rem;color:var(--text-muted);line-height:1.7;margin-bottom:16px">
+          Your saved preferences (food, vibes, transport) will automatically be included with this request. Our team will start working on your plan right away.
+        </p>
+
+        <div class="form-nav">
+          <button class="btn-back" onclick="prevPage(3)">&larr; Back</button>
+          <button class="btn-primary" style="margin-left:auto;padding:16px 40px" id="submitRequestBtn" onclick="submitRequest()">
+            Submit Request &rarr;
+          </button>
+        </div>
+      </div>
+
+      <!-- Success Page -->
+      <div class="form-page" id="pageSuccess">
+        <div style="text-align:center;padding:40px 0">
+          <div style="font-size:4rem;margin-bottom:16px">🎉</div>
+          <h2>Request Submitted!</h2>
+          <p class="text-soft mt-8" style="font-size:.92rem;line-height:1.7">
+            Our team has received your request and will get to work right away.
+            You'll receive an email when your date plan is ready.
+          </p>
+          <div style="margin-top:32px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+            <a href="./dashboard.html" class="btn-primary">View My Plans</a>
+            <a href="./request.html" class="btn-ghost">Request Another</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="mobile-tabs" id="mobileTabs"></div>
+
+  <script type="module" src="js/request-form.js"></script>
+</body>
+</html>

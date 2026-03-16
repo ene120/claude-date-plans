@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DateFlo | View Plan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/plan-viewer.css">
+</head>
+<body style="background:var(--bg-dark)">
+  <!-- Top Bar -->
+  <div class="plan-topbar">
+    <a href="./dashboard.html" class="btn-icon" title="Back to plans" style="flex-shrink:0">&larr;</a>
+    <div class="plan-topbar-title" id="planTitle">Loading...</div>
+    <div class="plan-topbar-actions">
+      <button class="btn-icon" id="favBtn" title="Save to Favorites">&#9734;</button>
+      <button class="btn-icon" id="shareBtn" title="Share">&#8599;</button>
+    </div>
+  </div>
+
+  <!-- Plan Content -->
+  <div class="plan-frame-wrap">
+    <div id="planLoading" style="text-align:center;padding:80px 20px">
+      <div style="font-size:2rem;margin-bottom:12px">Loading your date plan...</div>
+    </div>
+    <iframe class="plan-frame" id="planFrame" style="display:none" sandbox="allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+  </div>
+
+  <!-- Floating Actions -->
+  <div class="plan-floating-actions" id="floatingActions" style="display:none">
+    <button class="plan-fab" id="saveVenuesBtn">&#9734; Save Venues</button>
+  </div>
+
+  <!-- Modal for saving venues -->
+  <div class="modal-overlay" id="venueModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Save a Venue</h3>
+        <button class="modal-close" id="closeVenueModal">&times;</button>
+      </div>
+      <div class="form-group">
+        <label>Venue Name <span class="req">*</span></label>
+        <input type="text" class="form-input" id="venueName" placeholder="e.g. The Italian Place">
+      </div>
+      <div class="form-group">
+        <label>Type</label>
+        <select class="form-input" id="venueType">
+          <option value="restaurant">Restaurant</option>
+          <option value="bar">Bar</option>
+          <option value="activity">Activity</option>
+          <option value="park">Park</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Address</label>
+        <input type="text" class="form-input" id="venueAddress" placeholder="123 Main St">
+      </div>
+      <div class="form-group">
+        <label>City</label>
+        <input type="text" class="form-input" id="venueCity" placeholder="Los Angeles">
+      </div>
+      <div class="form-group">
+        <label>Google Maps URL</label>
+        <input type="url" class="form-input" id="venueGoogleUrl" placeholder="https://maps.google.com/...">
+      </div>
+      <div class="form-group">
+        <label>Notes</label>
+        <textarea class="form-input" id="venueNotes" placeholder="Any notes about this venue"></textarea>
+      </div>
+      <div class="modal-actions">
+        <button class="btn-ghost btn-small" id="cancelVenueBtn">Cancel</button>
+        <button class="btn-primary btn-small" id="saveVenueBtn">Save Venue</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/plan-viewer.js"></script>
+</body>
+</html>

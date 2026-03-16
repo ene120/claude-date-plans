@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DateFlo | Settings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <aside class="sidebar" id="sidebar"></aside>
+
+  <main class="main-content">
+    <div class="page-header">
+      <h1 class="page-title">Settings</h1>
+      <p class="page-sub">Manage your account, partner access, and preferences.</p>
+    </div>
+
+    <div style="max-width:600px">
+      <!-- Profile Section -->
+      <div class="editable-section">
+        <div class="editable-header">
+          <h3>Your Profile</h3>
+        </div>
+        <div class="form-group">
+          <label>Display Name</label>
+          <input type="text" class="form-input" id="settingsName" placeholder="Your name">
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" class="form-input" id="settingsEmail" disabled>
+          <div class="form-hint">Email cannot be changed. Contact support if needed.</div>
+        </div>
+        <div class="form-group">
+          <label>Phone (optional)</label>
+          <input type="tel" class="form-input" id="settingsPhone" placeholder="(555) 555 5555">
+        </div>
+        <button class="btn-primary btn-small" id="saveProfileBtn">Save Changes</button>
+      </div>
+
+      <!-- Partner Section -->
+      <div class="editable-section">
+        <div class="editable-header">
+          <h3>Your Partner</h3>
+        </div>
+        <div id="partnerStatus">
+          <!-- Filled by JS -->
+        </div>
+      </div>
+
+      <!-- Notifications Section -->
+      <div class="editable-section">
+        <div class="editable-header">
+          <h3>Notifications</h3>
+        </div>
+        <div class="toggle-row">
+          <span class="toggle-label">Email me when my plan is ready</span>
+          <label class="toggle">
+            <input type="checkbox" id="notifPlanReady" checked>
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+        <div class="toggle-row">
+          <span class="toggle-label">Email me partner updates</span>
+          <label class="toggle">
+            <input type="checkbox" id="notifPartner" checked>
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+        <div class="toggle-row">
+          <span class="toggle-label">DateFlo tips and promotions</span>
+          <label class="toggle">
+            <input type="checkbox" id="notifPromo">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Subscription Section -->
+      <div class="editable-section">
+        <div class="editable-header">
+          <h3>Subscription</h3>
+        </div>
+        <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px">
+          <span class="badge badge-delivered">Free Plan</span>
+          <span class="text-muted" style="font-size:.85rem" id="subStatus">No active subscription</span>
+        </div>
+        <button class="btn-ghost btn-small" disabled style="opacity:.5;cursor:default">Upgrade (Coming Soon)</button>
+      </div>
+
+      <!-- Account Actions -->
+      <div class="editable-section" style="border-color:rgba(214,48,49,.15)">
+        <div class="editable-header">
+          <h3>Account Actions</h3>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <button class="btn-ghost btn-small" id="signOutBtn">Sign Out</button>
+          <button class="btn-danger btn-small" id="deleteAccountBtn">Delete Account</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="mobile-tabs" id="mobileTabs"></div>
+
+  <script type="module" src="js/settings.js"></script>
+</body>
+</html>

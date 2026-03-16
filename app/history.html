@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DateFlo | Date History</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <aside class="sidebar" id="sidebar"></aside>
+
+  <main class="main-content">
+    <div class="page-header">
+      <h1 class="page-title">Date History</h1>
+      <p class="page-sub">A timeline of all your dates, past and upcoming.</p>
+    </div>
+
+    <div class="timeline" id="timeline">
+      <!-- Timeline items injected here -->
+    </div>
+
+    <div id="emptyHistory" class="empty-state hidden">
+      <div class="empty-icon">🕐</div>
+      <h3>No dates yet</h3>
+      <p>Once you receive your first date plan, it will appear here on your timeline.</p>
+      <a href="./request.html" class="btn-primary">Request Your First Plan</a>
+    </div>
+  </main>
+
+  <div class="mobile-tabs" id="mobileTabs"></div>
+
+  <script type="module" src="js/history.js"></script>
+</body>
+</html>

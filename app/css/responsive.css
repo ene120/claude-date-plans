@@ -1,0 +1,21 @@
+/* Additional Responsive Overrides */
+@media(max-width:768px){
+  .plan-grid{grid-template-columns:1fr}
+  .fav-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .page-header{margin-bottom:20px}
+  .page-title{font-size:1.4rem}
+  .editable-section{padding:20px}
+  .glass-card{padding:20px}
+}
+
+@media(max-width:480px){
+  .choices{grid-template-columns:1fr}
+  .plan-card-thumb{height:110px}
+}
+
+/* Desktop wide */
+@media(min-width:1400px){
+  .plan-grid{grid-template-columns:repeat(3,1fr)}
+  .fav-grid{grid-template-columns:repeat(3,1fr)}
+}

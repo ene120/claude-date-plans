@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DateFlo | My Date Plans</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar"></aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Onboarding (shown if no couple yet) -->
+    <div id="onboardingSection" class="hidden">
+      <div class="glass-card" style="max-width:560px;margin:0 auto;text-align:center">
+        <div style="font-size:3rem;margin-bottom:16px">💕</div>
+        <h2>Welcome to DateFlo</h2>
+        <p class="text-soft mt-8" style="font-size:.92rem;line-height:1.7">
+          Let's set up your couple profile so we can start planning unforgettable dates for you.
+        </p>
+
+        <div style="text-align:left;margin-top:32px">
+          <div class="form-group">
+            <label>Your Name <span class="req">*</span></label>
+            <input type="text" class="form-input" id="onboardName1" placeholder="e.g. Joseph">
+          </div>
+          <div class="form-group">
+            <label>Your Partner's Name <span class="req">*</span></label>
+            <input type="text" class="form-input" id="onboardName2" placeholder="e.g. Sandy">
+          </div>
+        </div>
+
+        <button class="btn-primary" style="width:100%;justify-content:center;margin-top:8px" id="onboardBtn">
+          Create Our Profile &rarr;
+        </button>
+
+        <div id="inviteCodeNotice" class="hidden" style="margin-top:20px;padding:16px;background:rgba(0,184,148,.1);border:1px solid rgba(0,184,148,.2);border-radius:14px">
+          <p style="font-size:.85rem;color:#00b894;font-weight:600">You have an invite code! We'll link you to your partner's profile after setup.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dashboard Content (shown when couple exists) -->
+    <div id="dashboardContent" class="hidden">
+      <div class="page-header">
+        <h1 class="page-title">My Date Plans</h1>
+        <p class="page-sub" id="coupleGreeting">Your personalized date plans, all in one place.</p>
+      </div>
+
+      <div class="plan-grid" id="planGrid">
+        <!-- Plan cards injected here -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Mobile Tabs -->
+  <div class="mobile-tabs" id="mobileTabs"></div>
+
+  <script type="module" src="js/dashboard.js"></script>
+</body>
+</html>

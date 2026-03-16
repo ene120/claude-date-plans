@@ -1,0 +1,118 @@
+/* Plan Cards Grid */
+.plan-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+  gap:20px;
+}
+.plan-card{
+  background:var(--glass);border:1px solid var(--glass-border);
+  border-radius:var(--radius-lg);overflow:hidden;
+  transition:transform .3s,border-color .3s;cursor:pointer;
+  text-decoration:none;color:inherit;display:block;
+}
+.plan-card:hover{transform:translateY(-4px);border-color:rgba(224,87,128,.3)}
+.plan-card-thumb{
+  height:140px;
+  background:linear-gradient(135deg,var(--bg-mid),var(--deep-rose),var(--rose));
+  position:relative;display:flex;align-items:flex-end;padding:16px;
+}
+.plan-card-thumb img{width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0}
+.plan-card-status{position:absolute;top:12px;right:12px}
+.plan-card-body{padding:20px}
+.plan-card-title{
+  font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;
+  margin-bottom:8px;line-height:1.3;
+}
+.plan-card-meta{
+  display:flex;align-items:center;gap:16px;
+  font-size:.82rem;color:var(--text-muted);
+}
+.plan-card-meta span{display:flex;align-items:center;gap:5px}
+
+/* New Plan CTA Card */
+.plan-card-new{
+  border:2px dashed var(--glass-border);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  min-height:240px;text-align:center;padding:32px;
+  background:transparent;
+}
+.plan-card-new:hover{border-color:var(--rose);background:rgba(224,87,128,.04)}
+.plan-card-new .new-icon{
+  font-size:2.4rem;margin-bottom:12px;
+  width:60px;height:60px;border-radius:50%;
+  background:rgba(224,87,128,.1);
+  display:flex;align-items:center;justify-content:center;
+}
+.plan-card-new h4{font-family:'Playfair Display',serif;font-size:1rem;margin-bottom:6px}
+.plan-card-new p{color:var(--text-muted);font-size:.82rem}
+
+/* Favorite Cards Grid */
+.fav-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:16px;
+}
+.fav-card{
+  background:var(--glass);border:1px solid var(--glass-border);
+  border-radius:var(--radius-lg);padding:20px;
+  transition:border-color .3s;
+}
+.fav-card:hover{border-color:rgba(224,87,128,.2)}
+.fav-card-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px}
+.fav-card-name{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600}
+.fav-card-type{
+  padding:3px 10px;border-radius:var(--radius-pill);
+  font-size:.7rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+  background:rgba(224,87,128,.12);color:var(--rose);
+}
+.fav-card-city{font-size:.82rem;color:var(--text-muted);margin-bottom:12px}
+.fav-card-notes{font-size:.85rem;color:var(--text-soft);line-height:1.6;margin-bottom:12px}
+.fav-card-actions{display:flex;gap:8px;align-items:center}
+.fav-card-source{font-size:.75rem;color:var(--text-muted);margin-top:8px}
+.fav-card-source a{color:var(--rose);text-decoration:underline}
+
+/* Map Buttons (matches main site) */
+.map-btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:32px;height:32px;border-radius:8px;
+  transition:transform .2s;
+}
+.map-btn:hover{transform:scale(1.1)}
+.map-btn-google{background:#fff;border:1px solid #ccc}
+.map-btn-apple{background:#000}
+.map-btn img{width:18px;height:18px}
+
+/* Skeleton Cards */
+.plan-card-skeleton{
+  background:var(--glass);border:1px solid var(--glass-border);
+  border-radius:var(--radius-lg);overflow:hidden;
+}
+.plan-card-skeleton .skel-thumb{height:140px}
+.plan-card-skeleton .skel-body{padding:20px}
+.plan-card-skeleton .skel-title{height:20px;width:70%;margin-bottom:12px}
+.plan-card-skeleton .skel-meta{height:14px;width:50%}
+
+/* Timeline */
+.timeline{position:relative;padding-left:32px}
+.timeline::before{
+  content:'';position:absolute;left:12px;top:0;bottom:0;
+  width:2px;background:var(--glass-border);
+}
+.timeline-item{
+  position:relative;padding:20px 0;
+}
+.timeline-dot{
+  position:absolute;left:-26px;top:24px;
+  width:14px;height:14px;border-radius:50%;
+  background:var(--rose);border:3px solid var(--bg-dark);
+  z-index:1;
+}
+.timeline-dot.completed{background:var(--status-delivered)}
+.timeline-dot.upcoming{background:var(--status-requested);animation:pulse-badge 2s ease-in-out infinite}
+.timeline-card{
+  background:var(--glass);border:1px solid var(--glass-border);
+  border-radius:var(--radius-lg);padding:20px;
+  transition:border-color .3s;cursor:pointer;
+}
+.timeline-card:hover{border-color:rgba(224,87,128,.2)}
+.timeline-date{font-size:.82rem;color:var(--text-muted);margin-bottom:6px}
+.timeline-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;margin-bottom:4px}
+.timeline-city{font-size:.85rem;color:var(--text-soft)}
